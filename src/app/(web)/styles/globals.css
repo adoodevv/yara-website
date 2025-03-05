@@ -1,0 +1,24 @@
+@import "tailwindcss";
+@plugin "@tailwindcss/typography";
+
+.font-salted {
+  font-family: var(--font-salted);
+}
+
+.font-neue {
+  font-family: var(--font-neue);
+}
+
+html,
+body {
+  -ms-overflow-style: hidden;
+  scrollbar-width: none;
+}
+
+.img {
+  @apply object-cover w-full h-full;
+}
+
+.scale-animation {
+  @apply hover:scale-115 transition-all duration-700;
+}
