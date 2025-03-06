@@ -39,6 +39,19 @@ export default async function BlogArticle(props: BlogArticleProps) {
    const params = await props.params
    const data: FullBlog = await getData(params.slug)
 
+   // Handle the image URL separately with proper type checking
+   let imageUrl = "/placeholder.svg"
+   try {
+      if (data.titleImage) {
+         // Force the URL to be a string
+         imageUrl = urlFor(data.titleImage).url() as unknown as string
+      }
+   } catch (error) {
+      console.error("Error processing image URL:", error)
+      // Fallback to placeholder if there's an error
+      imageUrl = "/placeholder.svg"
+   }
+
    return (
       <div className="flex flex-col items-center justify-center">
          <h1>
@@ -46,7 +59,7 @@ export default async function BlogArticle(props: BlogArticleProps) {
             <span className="block text-3xl text-center font-bold tracking-tight mt-2">{data.title}</span>
          </h1>
          <Image
-            src={urlFor(data.titleImage).url() ? String(urlFor(data.titleImage).url()) : "/placeholder.svg"}
+            src={imageUrl || "/placeholder.svg"}
             alt={data.title || "Blog post image"}
             width={800}
             height={800}
