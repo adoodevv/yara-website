@@ -46,8 +46,8 @@ export default async function BlogArticle(props: BlogArticleProps) {
             <span className="block text-3xl text-center font-bold tracking-tight mt-2">{data.title}</span>
          </h1>
          <Image
-            src={urlFor(data.titleImage).url() || "/placeholder.svg"}
-            alt={data.title}
+            src={urlFor(data.titleImage).url() ? String(urlFor(data.titleImage).url()) : "/placeholder.svg"}
+            alt={data.title || "Blog post image"}
             width={800}
             height={800}
             priority
@@ -59,4 +59,3 @@ export default async function BlogArticle(props: BlogArticleProps) {
       </div>
    )
 }
-
