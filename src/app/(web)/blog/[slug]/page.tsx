@@ -1,3 +1,16 @@
+const BlogArticle = () => {
+   return (
+      <div className="flex flex-col items-center justify-center">
+         <h1>
+            <span className="block text-base text-center font-semibold tracking-wide">Yara Blog</span>
+         </h1>
+      </div>
+   )
+}
+
+export default BlogArticle
+
+
 // import type { FullBlog } from "@/lib/interface"
 // import { client, urlFor } from "@/lib/sanity"
 // import { PortableText } from "next-sanity"
