@@ -1,9 +1,10 @@
-// app/providers.tsx
 'use client'
 import { useState, useEffect } from 'react';
 import LoadingScreen from './loading';
 
-export function Providers({ children }) {
+import { ReactNode } from 'react';
+
+export function Providers({ children }: { children: ReactNode }) {
    const [isLoading, setIsLoading] = useState(true);
 
    useEffect(() => {
