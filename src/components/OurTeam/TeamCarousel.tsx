@@ -1,6 +1,6 @@
 'use client'
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useCallback } from "react";
 import classNames from "classnames";
 import { ArrowLeftIcon, ArrowRightIcon } from "lucide-react";
 import Image from "next/image";
@@ -42,7 +42,7 @@ const TeamCarousel = () => {
    const [selectedIndex, setSelectedIndex] = useState(2);
    const [visibleMembers, setVisibleMembers] = useState<typeof teamMembers>([]);
 
-   const updateVisibleMembers = () => {
+   const updateVisibleMembers = useCallback(() => {
       const screenWidth = window.innerWidth;
       let membersToShow;
 
@@ -60,7 +60,7 @@ const TeamCarousel = () => {
       ));
 
       setVisibleMembers(teamMembers.slice(start, start + membersToShow));
-   };
+   }, []);
 
    useEffect(() => {
       updateVisibleMembers();
@@ -111,8 +111,8 @@ const TeamCarousel = () => {
                      onClick={() => setSelectedIndex(teamMembers.findIndex(m => m.name === member.name))}
                   >
                      <Image
-                        width={160}
-                        height={160}
+                        width={500}
+                        height={500}
                         src={member.image}
                         alt={member.name}
                         className="h-40 w-40 object-cover rounded-lg cursor-pointer"

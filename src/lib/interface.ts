@@ -1,24 +1,31 @@
-export interface simpleBlogCard {
-   title: string
-   smallDescription: string
-   currentSlug: string
-   titleImage: any
+export interface ImageType {
+   url: string;
+   alt?: string;
+   width?: number;
+   height?: number;
 }
 
-export interface fullBlog {
-   currentSlug: string
-   title: string
-   content: string
-   titleImage: any
+export interface SimpleBlogCard {
+   title: string;
+   smallDescription: string;
+   currentSlug: string;
+   titleImage: ImageType;
 }
 
-export interface newsAnnouncement {
-   _id: string
-   title: string
-   slug: string
-   mainImage: any
-   link?: string
-   description?: string
+export interface FullBlog {
+   currentSlug: string;
+   title: string;
+   content: string;
+   titleImage: ImageType;
+}
+
+export interface NewsAnnouncement {
+   _id: string;
+   title: string;
+   slug: string;
+   mainImage: ImageType;
+   link?: string;
+   description?: string;
 }
 
 export interface WhatsNew {
@@ -27,7 +34,7 @@ export interface WhatsNew {
    slug: {
       current: string;
    };
-   mainImage: any;
+   mainImage: ImageType;
    link?: string;
    description: string;
 }
