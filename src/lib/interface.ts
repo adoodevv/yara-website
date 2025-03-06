@@ -27,7 +27,7 @@ export interface WhatsNew {
    slug: {
       current: string;
    };
-   mainImage: string;
+   mainImage: any;
    link?: string;
    description: string;
 }

@@ -54,7 +54,7 @@ const FellowshipProgram = () => {
                   STEM FELLOWSHIP
                </h1>
                <p className="font-light mt-4 text-lg sm:text-xl lg:text-2xl max-w-6xl mx-auto px-2 sm:px-4">
-                  The <span className="font-medium">one-year STEM fellowship program</span> is designed to incubate the <span className="font-medium">brightest and most driven undergrads</span> toward producing <span className="font-medium">high-impact research</span> in pioneering STEM fields that directly impact Africa's development.
+                  The <span className="font-medium">one-year STEM fellowship program</span> is designed to incubate the <span className="font-medium">brightest and most driven undergrads</span> toward producing <span className="font-medium">high-impact research</span> in pioneering STEM fields that directly impact Africa&apos;s development.
                </p>
             </div>
             <div className="absolute bottom-44 md:bottom-0 lg:-bottom-10 z-0 w-full">

@@ -19,8 +19,8 @@ const OurTeam = () => {
             </div>
             <div className="absolute top-[5%] left-[5%] hidden sm:block">
                <Image
-                  width={500}
-                  height={500}
+                  width={1000}
+                  height={1000}
                   src="/images/22.png"
                   alt="bulb illustration"
                   className="w-1/4 h-auto flex-shrink-0"

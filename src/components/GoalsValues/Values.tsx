@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 const Values = () => {
    const values = [
       {
@@ -46,7 +48,9 @@ const Values = () => {
             ))}
          </div>
 
-         <img
+         <Image
+            width={1920}
+            height={1080}
             src="/images/18.png"
             alt="leaf illustration"
             className="absolute bottom-32 w-1/4 sm:w-[35%] left-0 sm:left-[-10%] h-auto z-0 opacity-50 sm:opacity-100"

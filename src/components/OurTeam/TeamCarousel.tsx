@@ -3,6 +3,7 @@
 import { useState, useEffect } from "react";
 import classNames from "classnames";
 import { ArrowLeftIcon, ArrowRightIcon } from "lucide-react";
+import Image from "next/image";
 
 const teamMembers = [
    {
@@ -109,7 +110,9 @@ const TeamCarousel = () => {
                      )}
                      onClick={() => setSelectedIndex(teamMembers.findIndex(m => m.name === member.name))}
                   >
-                     <img
+                     <Image
+                        width={160}
+                        height={160}
                         src={member.image}
                         alt={member.name}
                         className="h-40 w-40 object-cover rounded-lg cursor-pointer"
