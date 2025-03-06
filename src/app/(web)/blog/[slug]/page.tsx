@@ -20,20 +20,18 @@ async function getData(slug: string) {
 
 // Add this function to generate static params
 export async function generateStaticParams() {
-   const query = `*[_type == 'blog'] {
-      "slug": slug.current
-   }`
+   const query = `*[_type == 'blog'] { "slug": slug.current }`;
+   const slugs = await client.fetch(query);
 
-   const slugs = await client.fetch(query)
-   return slugs.map((slug: any) => ({
+   return slugs.map((slug: { slug: string }) => ({
       slug: slug.slug,
-   }))
+   }));
 }
 
 export default async function BlogArticle({
    params,
 }: {
-   params: { slug: string }
+   params: { slug: string };
 }) {
    const data: FullBlog = await getData(params.slug)
 
