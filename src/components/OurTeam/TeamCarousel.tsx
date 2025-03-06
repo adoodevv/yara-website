@@ -42,8 +42,9 @@ const TeamCarousel = () => {
    const [selectedIndex, setSelectedIndex] = useState(2);
    const [visibleMembers, setVisibleMembers] = useState<typeof teamMembers>([]);
 
+   // Fixed: Added selectedIndex to the dependency array
    const updateVisibleMembers = useCallback(() => {
-      const screenWidth = window.innerWidth;
+      const screenWidth = typeof window !== 'undefined' ? window.innerWidth : 1024;
       let membersToShow;
 
       if (screenWidth < 640) {
@@ -60,11 +61,24 @@ const TeamCarousel = () => {
       ));
 
       setVisibleMembers(teamMembers.slice(start, start + membersToShow));
-   }, []);
+   }, [selectedIndex]); // Added selectedIndex as dependency
 
+   // Fixed: Added updateVisibleMembers to the dependency array
    useEffect(() => {
       updateVisibleMembers();
-   }, [selectedIndex]);
+
+      // Add window resize handler
+      const handleResize = () => {
+         updateVisibleMembers();
+      };
+
+      window.addEventListener('resize', handleResize);
+
+      // Clean up event listener on component unmount
+      return () => {
+         window.removeEventListener('resize', handleResize);
+      };
+   }, [updateVisibleMembers]); // Added updateVisibleMembers as dependency
 
    const handlePrevious = () => {
       setSelectedIndex((prev) => (prev > 0 ? prev - 1 : prev));
@@ -96,10 +110,10 @@ const TeamCarousel = () => {
             </>
 
             {/* Team Members Gallery */}
-            <div className="flex justify-center items-center space-x-4 sm:space-x-8 md:space-x-16 overflow-y-none overflow-x-none py-4">
+            <div className="flex justify-center items-center space-x-4 sm:space-x-8 md:space-x-16 overflow-hidden py-4">
                {visibleMembers.map((member, index) => (
                   <div
-                     key={index}
+                     key={`member-${member.name}`}
                      className={classNames(
                         "relative transition-all duration-300 grayscale flex-shrink-0",
                         {
@@ -141,7 +155,7 @@ const TeamCarousel = () => {
          <div className="flex space-x-2 mt-4">
             {teamMembers.map((_, index) => (
                <button
-                  key={index}
+                  key={`dot-${index}`}
                   className={`h-2 sm:h-3 transition-all duration-300 rounded-full ${selectedIndex === index ? "bg-black w-4 sm:w-6" : "bg-gray-300 w-2 sm:w-3"
                      }`}
                   onClick={() => setSelectedIndex(index)}
