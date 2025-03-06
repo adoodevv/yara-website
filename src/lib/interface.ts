@@ -26,7 +26,7 @@ export interface SimpleBlogCard {
 export interface FullBlog {
    currentSlug: string;
    title: string;
-   content: any; // Changed from string to any (or use a more specific PortableText type)
+   content: string; // Changed from string to any (or use a more specific PortableText type)
    titleImage: SanityImageAsset; // Changed from ImageType
 }
 

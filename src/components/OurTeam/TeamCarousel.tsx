@@ -111,7 +111,7 @@ const TeamCarousel = () => {
 
             {/* Team Members Gallery */}
             <div className="flex justify-center items-center space-x-4 sm:space-x-8 md:space-x-16 overflow-hidden py-4">
-               {visibleMembers.map((member, index) => (
+               {visibleMembers.map((member) => (
                   <div
                      key={`member-${member.name}`}
                      className={classNames(
