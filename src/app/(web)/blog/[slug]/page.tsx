@@ -18,7 +18,6 @@ async function getData(slug: string) {
    return data
 }
 
-// Add this function to generate static params
 export async function generateStaticParams() {
    const query = `*[_type == 'blog'] { "slug": slug.current }`;
    const slugs = await client.fetch(query);
@@ -28,11 +27,15 @@ export async function generateStaticParams() {
    }));
 }
 
-export default async function BlogArticle({
-   params,
-}: {
-   params: { slug: string };
-}) {
+// Moving the type annotation to a separate interface
+interface BlogArticleProps {
+   params: {
+      slug: string;
+   };
+}
+
+export default async function BlogArticle(props: BlogArticleProps) {
+   const { params } = props;
    const data: FullBlog = await getData(params.slug)
 
    return (
