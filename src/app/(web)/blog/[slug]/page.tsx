@@ -18,8 +18,20 @@ async function getData(slug: string) {
    return data
 }
 
+// Add this function to generate static params
+export async function generateStaticParams() {
+   const query = `*[_type == 'blog'] {
+      "slug": slug.current
+   }`
+
+   const slugs = await client.fetch(query)
+   return slugs.map((slug: any) => ({
+      slug: slug.slug,
+   }))
+}
+
 export default async function BlogArticle({
-   params
+   params,
 }: {
    params: { slug: string }
 }) {
