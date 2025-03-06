@@ -1,14 +1,62 @@
-import React from 'react'
+import Image from "next/image";
 
-const News = () => {
+const WhatsNew = () => {
    return (
-      <div>
-         News
-      </div>
-   )
-}
+      <section className="pt-8 sm:pt-12 md:pt-16 px-4">
+         <div className="max-w-7xl mx-auto">
+            <div className="flex flex-col lg:flex-row items-center justify-center gap-8 lg:gap-12">
+               <div className="lg:w-1/2">
+                  <div className="grid grid-cols-2 gap-3 sm:gap-4 justify-items-end">
+                     <div className="col-span-2 overflow-hidden rounded-[20px] sm:rounded-[30px]">
+                        <Image
+                           width={1000}
+                           height={1000}
+                           src="https://images.unsplash.com/photo-1581093588401-fbb62a02f120?ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=80"
+                           alt="Researcher working"
+                           className="img scale-animation rounded-[20px] sm:rounded-[30px] shadow-md w-full"
+                        />
+                     </div>
+                     <div className="overflow-hidden rounded-[20px] sm:rounded-[30px]">
+                        <Image
+                           width={1000}
+                           height={1000}
+                           src="https://images.unsplash.com/photo-1576086213369-97a306d36557?ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=80"
+                           alt="Lab research"
+                           className="img scale-animation rounded-[20px] sm:rounded-[30px] shadow-md w-full"
+                        />
+                     </div>
+                     <div className="overflow-hidden rounded-[20px] sm:rounded-[30px]">
+                        <Image
+                           width={1000}
+                           height={1000}
+                           src="https://images.unsplash.com/photo-1582719508461-905c673771fd?ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=80"
+                           alt="STEM education"
+                           className="img scale-animation rounded-[20px] sm:rounded-[30px] shadow-md w-full"
+                        />
+                     </div>
+                  </div>
+               </div>
+               <div className="font-neue text-center lg:text-left mt-8 lg:mt-0">
+                  <span className="text-3xl sm:text-4xl md:text-5xl text-purple-600 font-salted">CHECK OUT</span>
+                  <h2 className="text-5xl sm:text-6xl md:text-8xl font-bold mt-2 mb-4 sm:mb-6">
+                     WHAT&apos;S<br />NEW
+                  </h2>
+                  <p className="text-lg sm:text-xl font-roman mb-6 sm:mb-8">
+                     Stay Updated with the Latest <br /> from <span className="font-medium">YARA</span>
+                  </p>
+               </div>
+            </div>
+            <div className="flex justify-center items-center pt-4 sm:pt-8">
+               <button className="font-neue font-light mt-4 sm:mt-8 px-4 sm:px-6 py-2 sm:py-3 border-[1px] border-black text-black rounded-full hover:bg-black hover:text-white transition-all duration-700">
+                  Sign up for newsletter
+               </button>
+            </div>
+         </div>
+      </section>
+   );
+};
 
-export default News
+export default WhatsNew;
 
 
 // 'use client'
