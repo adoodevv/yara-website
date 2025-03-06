@@ -3,6 +3,7 @@ import { useState, useEffect } from 'react';
 import { client, urlFor } from "@/lib/sanity"
 import { WhatsNew } from '@/lib/interface';
 import Link from 'next/link';
+import Image from 'next/image';
 
 const News = () => {
    const [newsData, setNewsData] = useState<WhatsNew[]>([]);
@@ -68,7 +69,9 @@ const News = () => {
                      {currentNewsItems.length > 0 && (
                         <div className="col-span-2 overflow-hidden rounded-[20px] sm:rounded-[30px]">
                            <Link href={currentNewsItems[0].link || `/news/${currentNewsItems[0].slug?.current}`}>
-                              <img
+                              <Image
+                                 width={500}
+                                 height={500}
                                  src={urlFor(currentNewsItems[0].mainImage).url()}
                                  alt={currentNewsItems[0].title}
                                  className="img scale-animation shadow-md"
@@ -79,7 +82,9 @@ const News = () => {
                      {currentNewsItems.length > 1 && (
                         <div className="overflow-hidden rounded-[20px] sm:rounded-[30px]">
                            <Link href={currentNewsItems[1].link || `/news/${currentNewsItems[1].slug?.current}`}>
-                              <img
+                              <Image
+                                 width={500}
+                                 height={500}
                                  src={urlFor(currentNewsItems[1].mainImage).url()}
                                  alt={currentNewsItems[1].title}
                                  className="img scale-animation shadow-md"
@@ -90,7 +95,9 @@ const News = () => {
                      {currentNewsItems.length > 2 && (
                         <div className="overflow-hidden rounded-[20px] sm:rounded-[30px]">
                            <Link href={currentNewsItems[2].link || `/news/${currentNewsItems[2].slug?.current}`}>
-                              <img
+                              <Image
+                                 width={500}
+                                 height={500}
                                  src={urlFor(currentNewsItems[2].mainImage).url()}
                                  alt={currentNewsItems[2].title}
                                  className="img scale-animation shadow-md"
@@ -115,7 +122,7 @@ const News = () => {
                <div className="font-neue text-center lg:text-left mt-8 lg:mt-0">
                   <span className="text-3xl sm:text-4xl md:text-5xl text-purple-600 font-salted">CHECK OUT</span>
                   <h2 className="text-5xl sm:text-6xl md:text-8xl font-bold mt-2 mb-4 sm:mb-6">
-                     WHAT'S<br />NEW
+                     WHAT&apos;S<br />NEW
                   </h2>
                   <p className="text-lg sm:text-xl font-roman mb-6 sm:mb-8">
                      Stay Updated with the Latest <br /> from <span className="font-medium">YARA</span>

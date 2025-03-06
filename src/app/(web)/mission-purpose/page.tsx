@@ -1,5 +1,6 @@
 import Goals from "@/components/GoalsValues/Goals";
 import Values from "@/components/GoalsValues/Values";
+import Image from "next/image";
 
 const MissionAndPurpose = () => {
    return (
@@ -24,12 +25,16 @@ const MissionAndPurpose = () => {
                   </p>
                </div>
 
-               <img
+               <Image
+                  width={500}
+                  height={500}
                   src="/images/7.png"
                   alt="leaf illustration"
                   className="z-0 absolute opacity-50 sm:opacity-100 top-16 w-1/4 sm:w-1/3 left-0 sm:left-[-5%] h-auto"
                />
-               <img
+               <Image
+                  width={500}
+                  height={500}
                   src="/images/17.png"
                   alt="leaf illustration"
                   className="z-0 absolute opacity-50 sm:opacity-100 bottom-1/5 w-1/4 sm:w-1/3 right-0 h-auto"
@@ -41,9 +46,11 @@ const MissionAndPurpose = () => {
                   VISION
                </h1>
                <h2 className="relative font-bold text-xl sm:text-2xl lg:text-3xl tracking-tight text-black mt-4 px-4">
-                  To create a global hub of the world's best African<br className="hidden sm:block" />
+                  To create a global hub of the world&apos;s best African<br className="hidden sm:block" />
                   researchers pioneering new knowledge
-                  <img
+                  <Image
+                     width={500}
+                     height={500}
                      src="/images/15.png"
                      alt="underline header illustration"
                      className="absolute w-[90%] sm:w-[500px] md:w-[600px] lg:w-[700px] left-1/2 transform -translate-x-1/2 top-16 sm:top-6"

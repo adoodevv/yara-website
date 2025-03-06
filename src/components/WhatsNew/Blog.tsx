@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import { simpleBlogCard } from "@/lib/interface"
 import { client, urlFor } from '@/lib/sanity';
+import Image from 'next/image';
 
 async function getData() {
    const query = `
@@ -24,12 +25,16 @@ export default async function Blog() {
          <div className="mb-8">
             <h2 className="relative text-2xl sm:text-3xl font-bold">
                Blog & Research Insights
-               <img
+               <Image
+                  width={500}
+                  height={500}
                   src="/images/15.png"
                   alt="underline header illustration"
                   className="absolute left-0 h-auto w-[70%] sm:w-[50%] top-4"
                />
-               <img
+               <Image
+                  width={500}
+                  height={500}
                   src="/images/2.png"
                   alt="bulb illustration"
                   className="absolute z-0 -rotate-[45deg] -bottom-40 w-auto -right-32 h-[700px] max-w-4xl mx-auto hidden opacity-50 lg:opacity-100 sm:block"
@@ -53,7 +58,9 @@ export default async function Blog() {
                               </p>
                            </div>
                            <div className="flex-shrink-0">
-                              <img
+                              <Image
+                                 width={500}
+                                 height={500}
                                  src={urlFor(blog.titleImage).url()} alt={blog.title}
                                  className="w-48 h-32 object-cover rounded-lg"
                               />

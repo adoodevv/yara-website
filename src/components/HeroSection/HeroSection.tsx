@@ -1,5 +1,6 @@
 'use client'
 import { useEffect, useState } from 'react';
+import Image from 'next/image';
 
 const HeroSection = () => {
    const [isMobile, setIsMobile] = useState(false);
@@ -38,7 +39,9 @@ const HeroSection = () => {
          </div>
          <div className="absolute top-10 md:-top-8">
             <div className="absolute inset-0 bg-gradient-to-t from-gray-200 via-gray-200/95 sm:via-gray-200 to-transparent"></div>
-            <img
+            <Image
+               width={1000}
+               height={1000}
                src="/images/10.png"
                alt="planet illustration"
                className="w-3/4 right-0 h-auto max-w-4xl mx-auto"

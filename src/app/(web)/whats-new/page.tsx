@@ -1,5 +1,6 @@
 import NewsAndAnnouncements from "@/components/WhatsNew/NewsAndAnnouncements";
 import Blog from "@/components/WhatsNew/Blog";
+import Image from "next/image";
 
 const News = () => {
    return (
@@ -12,7 +13,9 @@ const News = () => {
                Subscribe Now
             </button>
          </section>
-         <img
+         <Image
+            width={500}
+            height={500}
             src="/images/3.png"
             alt="underline header illustration"
             className="w-full h-auto max-w-4xl mx-auto"

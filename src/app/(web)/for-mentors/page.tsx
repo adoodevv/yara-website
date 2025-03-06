@@ -1,4 +1,5 @@
 import { Circle } from "lucide-react";
+import Image from "next/image";
 
 const ForMentors = () => {
    const mentorResponsibilities = [
@@ -35,7 +36,9 @@ const ForMentors = () => {
                   <div className="relative">
                      <p className="font-medium text-2xl sm:text-3xl lg:text-4xl tracking-tight text-black mx-auto px-4 py-12 sm:py-16 lg:py-20">
                         Fellowship Program Mentor Application
-                        <img
+                        <Image
+                           width={500}
+                           height={500}
                            src="/images/15.png"
                            alt="underline header illustration"
                            className="absolute top-[60%] left-1/2 -translate-x-1/2 w-64 sm:w-80 lg:w-[450px] h-auto"
@@ -44,7 +47,9 @@ const ForMentors = () => {
                   </div>
                </div>
             </div>
-            <img
+            <Image
+               width={500}
+               height={500}
                src="/images/11.png"
                alt="human illustration"
                className="absolute -rotate-[15deg] top-44 -right-[3%] w-40 sm:w-48 lg:w-60 h-auto opacity-50 sm:opacity-100"
@@ -63,7 +68,7 @@ const ForMentors = () => {
                </p>
                <p className="font-light text-lg sm:text-xl lg:text-2xl">
                   This is a unique opportunity to contribute to the development of the next generation of African researchers
-                  and help address some of the continent's most pressing challenges through high-quality, ethical, and
+                  and help address some of the continent&apos;s most pressing challenges through high-quality, ethical, and
                   impactful research.
                </p>
             </div>
@@ -89,13 +94,15 @@ const ForMentors = () => {
                <p className="font-light text-lg sm:text-xl lg:text-2xl">
                   Our goal is to bridge the research capacity gap in Africa by equipping students with training, skills, and
                   network skills to excel in academia, research, and related fields. The program focuses on fostering innovation,
-                  critical thinking, and a commitment to solving Africa's challenges through research.
+                  critical thinking, and a commitment to solving Africa&apos;s challenges through research.
                </p>
                <p className="font-light text-lg sm:text-xl lg:text-2xl">
                   For our first cohort, we are selecting <span className="font-medium">10 highly motivated undergraduate students from Ghana</span> who are passionate about research and eager to pursue careers in STEM. These fellows will receive hands-on training, one-on-one mentorship, and access to resources and networks that will help them <span className="font-medium">produce publishable research</span> and <span className="font-medium">prepare for graduate-level studies.</span>
                </p>
             </div>
-            <img
+            <Image
+               width={500}
+               height={500}
                src="/images/12.png"
                alt="paper illustration"
                className="absolute -top-20 -left-[10%] md:-left-[17%] sm:-left-[30%] w-40 sm:w-48 lg:w-60 h-auto opacity-50 sm:opacity-100"
@@ -114,7 +121,9 @@ const ForMentors = () => {
             <div className="flex flex-col items-start space-y-6 sm:space-y-8 w-full">
                {mentorResponsibilities.map((responsibility, index) => (
                   <div key={index} className="flex items-start gap-4 group hover:translate-x-2 transition-transform duration-300">
-                     <img
+                     <Image
+                        width={500}
+                        height={500}
                         src="/images/20.png"
                         alt="check illustration"
                         className="w-6 sm:w-8 h-auto flex-shrink-0 mt-1"
@@ -127,7 +136,9 @@ const ForMentors = () => {
 
          {/* Benefits Section */}
          <div className="relative flex flex-col items-center justify-center w-full max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 pt-16 sm:pt-20">
-            <img
+            <Image
+               width={500}
+               height={500}
                src="/images/13.png"
                alt="head illustration"
                className="absolute -top-20 -right-[30%] md:-right-[17%] sm:-right-[10%] w-40 sm:w-48 lg:w-60 h-auto opacity-50 sm:opacity-100"
@@ -173,7 +184,9 @@ const ForMentors = () => {
 
          {/* Key Dates Section */}
          <div className="relative flex flex-col items-center justify-center w-full max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 pt-16 sm:pt-20 pb-20">
-            <img
+            <Image
+               width={500}
+               height={500}
                src="/images/4.png"
                alt="leaf illustration"
                className="absolute -top-10 -left-[35%] w-2/3 h-auto opacity-80"
@@ -183,7 +196,9 @@ const ForMentors = () => {
                   Key Dates
                </h2>
                <div className="absolute -top-6 md:-top-8 lg:-top-10 left-[50%] transform -translate-x-1/2 lg:translate-x-[calc(-50%)] z-0">
-                  <img
+                  <Image
+                     width={500}
+                     height={500}
                      src="/images/14.png"
                      alt="circle header illustration"
                      className="w-44 sm:w-60 h-auto max-w-4xl mx-auto"
@@ -193,7 +208,9 @@ const ForMentors = () => {
             <div className="w-full space-y-4 mt-8 flex flex-col items-center justify-center">
                {keyDates.map((date, index) => (
                   <div key={index} className="flex flex-row items-center gap-4 py-4 px-4 group hover:translate-x-2 transition-transform duration-300">
-                     <img
+                     <Image
+                        width={500}
+                        height={500}
                         src="/images/21.png"
                         alt="check illustration"
                         className="w-6 sm:w-8 h-auto flex-shrink-0"

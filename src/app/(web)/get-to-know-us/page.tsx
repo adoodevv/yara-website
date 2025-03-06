@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 const GetToKnowUs = () => {
    return (
       <section className="relative font-neue flex flex-col items-center justify-center px-4 py-20">
@@ -16,7 +18,9 @@ const GetToKnowUs = () => {
                   South Africa, Egypt, Nigeria, Kenya, and Algeria, leaving many regions with limited representation and opportunity.
                </p>
             </div>
-            <img
+            <Image
+               width={500}
+               height={500}
                src="/images/6.png"
                alt="leaf illustration"
                className="absolute sm:w-[30%] z-0 opacity-50 sm:opacity-100 top-16 w-[50%] left-[-5%] h-auto max-w-4xl mx-auto"
@@ -26,7 +30,9 @@ const GetToKnowUs = () => {
             <div className="relative font-neue flex flex-col items-center justify-center px-4">
                <h1 className="relative font-medium text-2xl sm:text-3xl md:text-4xl tracking-tight text-black mb-12 sm:mb-20 text-center">
                   Several critical factors contribute to this gap:
-                  <img
+                  <Image
+                     width={500}
+                     height={500}
                      src="/images/15.png"
                      alt="underline header illustration"
                      className="absolute left-1/2 transform -translate-x-1/2 h-auto w-[90%] sm:w-[500px] md:w-[600px] lg:w-[700px] top-10 sm:-top-4"

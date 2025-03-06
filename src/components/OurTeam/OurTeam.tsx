@@ -1,4 +1,5 @@
 import TeamCarousel from "./TeamCarousel"
+import Image from "next/image";
 
 const OurTeam = () => {
    return (
@@ -17,9 +18,11 @@ const OurTeam = () => {
                </p>
             </div>
             <div className="absolute top-[5%] left-[5%] hidden sm:block">
-               <img
+               <Image
+                  width={500}
+                  height={500}
                   src="/images/22.png"
-                  alt="check illustration"
+                  alt="bulb illustration"
                   className="w-1/4 h-auto flex-shrink-0"
                />
             </div>

@@ -1,4 +1,5 @@
 'use client'
+import Image from 'next/image';
 import { useEffect, useState } from 'react';
 
 const FellowshipProgram = () => {
@@ -39,7 +40,7 @@ const FellowshipProgram = () => {
                         <span className="font-medium">This intensive fellowship focuses on building technical skills and exposing students to early-stage research, aiming</span> to build a strong foundation for graduate studies <span className="font-medium">and a career in research or academic scholarship.</span>
                      </p>
                      <p className="font-roman text-lg sm:text-xl lg:text-2xl max-w-6xl">
-                        While we are launching with a <span className="font-medium">STEM-focused fellowship,</span> our long-term goal is to expand into <span className="font-medium">Social Science, Humanities, and Interdisciplinary research programs</span> that tackle Africa's diverse challenges.
+                        While we are launching with a <span className="font-medium">STEM-focused fellowship,</span> our long-term goal is to expand into <span className="font-medium">Social Science, Humanities, and Interdisciplinary research programs</span> that tackle Africa&apos;s diverse challenges.
                      </p>
                   </div>
                </div>
@@ -58,7 +59,9 @@ const FellowshipProgram = () => {
             </div>
             <div className="absolute bottom-44 md:bottom-0 lg:-bottom-10 z-0 w-full">
                <div className="absolute inset-0 bg-gradient-to-t from-gray-200 via-gray-200/95 to-transparent"></div>
-               <img
+               <Image
+                  width={1920}
+                  height={1080}
                   src="/images/16.png"
                   alt="gear illustration"
                   className="w-[55%] lg:w-1/3 h-auto max-w-4xl mx-auto"
@@ -73,7 +76,9 @@ const FellowshipProgram = () => {
                   Program Structure:
                </h1>
                <div className="absolute top-10 md:top-16 lg:top-16 left-1/2 transform -translate-x-1/2 lg:translate-x-[calc(-50%)] z-0">
-                  <img
+                  <Image
+                     width={1920}
+                     height={1080}
                      src="/images/14.png"
                      alt="circle header illustration"
                      className="w-64 sm:w-96 h-auto max-w-4xl mx-auto"
@@ -134,7 +139,7 @@ const FellowshipProgram = () => {
                   },
                   {
                      title: "Pioneering Research Opportunities:",
-                     description: "Work on and publish groundbreaking research that drives Africa's development."
+                     description: "Work on and publish groundbreaking research that drives Africas development."
                   },
                   {
                      title: "Career Development & PhD Readiness:",
@@ -142,7 +147,9 @@ const FellowshipProgram = () => {
                   }
                ].map((benefit, index) => (
                   <div key={index} className="flex items-start sm:items-center gap-4 group hover:transform hover:translate-x-2 transition-transform duration-300">
-                     <img
+                     <Image
+                        width={1920}
+                        height={1080}
                         src="/images/20.png"
                         alt="check illustration"
                         className="w-8 sm:w-12 h-auto mt-1 sm:mt-0"

@@ -2,12 +2,10 @@
 import Link from 'next/link'
 import { useState } from 'react';
 import { Squash as HamburgerSquash } from 'hamburger-react';
-import { usePathname } from "next/navigation";
 import { ChevronDown } from "lucide-react";
 import { motion } from "framer-motion";
 
 const Header = () => {
-  const pathname = usePathname();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
 
@@ -27,17 +25,13 @@ const Header = () => {
     }
   };
 
-  const isActive = (path: string) => {
-    return location.pathname === path ? 'bg-purple-100' : '';
-  };
-
   return (
     <div className="font-neue">
       {/* Header Navigation */}
       <header className="fixed flex top-0 w-full bg-gray-200/80 backdrop-blur-sm z-40 border-b border-gray-300 h-20">
         <div className="container mx-auto px-4 py-3 flex justify-between items-center">
           <div className="flex items-center">
-            <a href="/" className="text-2xl font-bold">YARA</a>
+            <Link href="/" className="text-2xl font-bold">YARA</Link>
           </div>
 
           {/* Desktop Navigation */}
@@ -57,13 +51,13 @@ const Header = () => {
               </button>
               {activeDropdown === 'about' && (
                 <div className="absolute left-0 mt-2 w-48 bg-white shadow-lg z-10 rounded-lg">
-                  <Link onClick={() => toggleDropdown('about')} href="/get-to-know-us" className={`${isActive('/get-to-know-us')} block px-4 py-2 text-base rounded-lg hover:bg-purple-100`}>
+                  <Link href="/get-to-know-us" className={`block px-4 py-2 text-base rounded-lg hover:bg-purple-100`}>
                     Get To Know Us
                   </Link>
-                  <Link href="/mission-purpose" className={`${isActive('/mission-purpose')} block px-4 py-2 text-base rounded-lg hover:bg-purple-100`}>
+                  <Link href="/mission-purpose" className={`block px-4 py-2 text-base rounded-lg hover:bg-purple-100`}>
                     Mission & Purpose
                   </Link>
-                  <Link href="/who-we-are" className={`${isActive('/who-we-are')} block px-4 py-2 text-base rounded-lg hover:bg-purple-100`}>
+                  <Link href="/who-we-are" className={`block px-4 py-2 text-base rounded-lg hover:bg-purple-100`}>
                     Who We Are
                   </Link>
                 </div>
@@ -85,10 +79,10 @@ const Header = () => {
               </button>
               {activeDropdown === 'what-we-do' && (
                 <div className="absolute left-0 mt-2 w-48 bg-white z-10 rounded-lg">
-                  <Link onClick={() => toggleDropdown('about')} href="/fellowship-program" className={`${isActive('/fellowship-program')} block px-4 py-2 text-base rounded-lg hover:bg-purple-100`}>
+                  <Link href="/fellowship-program" className={`block px-4 py-2 text-base rounded-lg hover:bg-purple-100`}>
                     Fellowship Programs
                   </Link>
-                  <Link href="/trainings-workshops" className={`${isActive('/trainings-workshops')} block px-4 py-2 text-base rounded-lg hover:bg-purple-100`}>
+                  <Link href="/trainings-workshops" className={`block px-4 py-2 text-base rounded-lg hover:bg-purple-100`}>
                     Training & Workshops
                   </Link>
                 </div>
@@ -110,17 +104,17 @@ const Header = () => {
               </button>
               {activeDropdown === 'how-to-apply' && (
                 <div className="absolute left-0 mt-2 w-48 bg-white/90 backdrop-blur-sm shadow-lg z-10 rounded-lg">
-                  <Link onClick={() => toggleDropdown('about')} href="/for-fellows" className={`${isActive('/for-fellows')} block px-4 py-2 text-base rounded-lg hover:bg-purple-100`}>
+                  <Link href="/for-fellows" className={`block px-4 py-2 text-base rounded-lg hover:bg-purple-100`}>
                     For Fellows
                   </Link>
-                  <Link href="/for-mentors" className={`${isActive('/for-mentors')} block px-4 py-2 text-base rounded-lg hover:bg-purple-100`}>
+                  <Link href="/for-mentors" className={`block px-4 py-2 text-base rounded-lg hover:bg-purple-100`}>
                     For Mentors
                   </Link>
                 </div>
               )}
             </div>
 
-            <Link href="/whats-new" className="font-roman hover:text-purple-600">What's New</Link>
+            <Link href="/whats-new" className="font-roman hover:text-purple-600">What&apos;s New</Link>
           </nav>
 
           {/* Mobile Menu Button */}
@@ -154,13 +148,13 @@ const Header = () => {
                 </button>
                 {activeDropdown === 'mobile-about' && (
                   <div className="pl-4">
-                    <Link href="/get-to-know-us" className={`${isActive('/get-to-know-us')} block px-4 py-2 text-base rounded-lg hover:bg-purple-100`}>
+                    <Link href="/get-to-know-us" className={`block px-4 py-2 text-base rounded-lg hover:bg-purple-100`}>
                       Get To Know Us
                     </Link>
-                    <Link href="/mission-purpose" className={`${isActive('/mission-purpose')} block px-4 py-2 text-base rounded-lg hover:bg-purple-100`}>
+                    <Link href="/mission-purpose" className={`block px-4 py-2 text-base rounded-lg hover:bg-purple-100`}>
                       Mission & Purpose
                     </Link>
-                    <Link href="/who-we-are" className={`${isActive('/who-we-are')} block px-4 py-2 text-base rounded-lg hover:bg-purple-100`}>
+                    <Link href="/who-we-are" className={`block px-4 py-2 text-base rounded-lg hover:bg-purple-100`}>
                       Who We Are
                     </Link>
                   </div>
@@ -182,10 +176,10 @@ const Header = () => {
                 </button>
                 {activeDropdown === 'mobile-what-we-do' && (
                   <div className="pl-4">
-                    <Link href="/fellowship-program" className={`${isActive('/fellowship-program')} block px-4 py-2 text-base rounded-lg hover:bg-purple-100`}>
+                    <Link href="/fellowship-program" className={`block px-4 py-2 text-base rounded-lg hover:bg-purple-100`}>
                       Fellowship Programs
                     </Link>
-                    <Link href="/trainings-workshops" className={`${isActive('/trainings-workshops')} block px-4 py-2 text-base rounded-lg hover:bg-purple-100`}>
+                    <Link href="/trainings-workshops" className={`block px-4 py-2 text-base rounded-lg hover:bg-purple-100`}>
                       Training & Workshops
                     </Link>
                   </div>
@@ -207,18 +201,18 @@ const Header = () => {
                 </button>
                 {activeDropdown === 'mobile-how-to-apply' && (
                   <div className="pl-4">
-                    <Link href="/for-fellows" className={`${isActive('/for-fellows')} block px-4 py-2 text-base rounded-lg hover:bg-purple-100`}>
+                    <Link href="/for-fellows" className={`block px-4 py-2 text-base rounded-lg hover:bg-purple-100`}>
                       For Fellows
                     </Link>
-                    <Link href="/for-mentors" className={`${isActive('/for-mentors')} block px-4 py-2 text-base rounded-lg hover:bg-purple-100`}>
+                    <Link href="/for-mentors" className={`block px-4 py-2 text-base rounded-lg hover:bg-purple-100`}>
                       For Mentors
                     </Link>
                   </div>
                 )}
               </div>
 
-              <Link href="/whats-new" className={`${isActive('/whats-new')} block px-3 py-2 font-roman rounded-lg hover:bg-purple-100`}>
-                What's New
+              <Link href="/whats-new" className={`block px-3 py-2 font-roman rounded-lg hover:bg-purple-100`}>
+                What&apos;s New
               </Link>
             </div>
           </div>

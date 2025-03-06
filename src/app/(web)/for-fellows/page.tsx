@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
 import { ChevronDown } from "lucide-react";
+import Image from "next/image";
 
 const ForFellows = () => {
    const [openIndex, setOpenIndex] = useState<number | null>(null);
@@ -63,7 +64,9 @@ const ForFellows = () => {
                   </p>
                </div>
             </div>
-            <img
+            <Image
+               width={1920}
+               height={1080}
                src="/images/6.png"
                alt="leaf illustration"
                className="absolute sm:w-[30%] z-0 opacity-50 sm:opacity-100 top-16 w-[50%] left-[-5%] h-auto max-w-4xl mx-auto"
@@ -100,7 +103,9 @@ const ForFellows = () => {
                <p className="font-medium text-2xl sm:text-3xl lg:text-4xl tracking-tight text-black">
                   Eligibility Criteria
                </p>
-               <img
+               <Image
+                  width={1920}
+                  height={1080}
                   src="/images/15.png"
                   alt="underline header illustration"
                   className="absolute top-2 left-1/2 -translate-x-1/2 w-auto mt-4"
@@ -115,7 +120,7 @@ const ForFellows = () => {
                         {index === 0 && <><span className="font-medium">3rd-year undergraduate </span>student in Ghana (any STEM-related field).</>}
                         {index === 1 && <><span className="font-medium">Strong </span>academic credentials & research interest</>}
                         {index === 2 && <>Commitment to completing the <span className="font-medium">one-year program, </span>including online sessions and boot camps.</>}
-                        {index === 3 && <>Aspiration to pursue <span className="font-medium">graduate studies (Master's/PhD) in research-related fields.</span></>}
+                        {index === 3 && <>Aspiration to pursue <span className="font-medium">graduate studies (Master&apos;s/PhD) in research-related fields.</span></>}
                      </p>
                   </div>
                ))}
@@ -128,7 +133,9 @@ const ForFellows = () => {
                <h2 className="font-medium text-2xl sm:text-3xl lg:text-4xl tracking-tight text-black">
                   Application Requirements
                </h2>
-               <img
+               <Image
+                  width={1920}
+                  height={1080}
                   src="/images/15.png"
                   alt="underline header illustration"
                   className="absolute top-2 left-1/2 -translate-x-1/2 w-auto mt-4"
@@ -138,7 +145,9 @@ const ForFellows = () => {
             <div className="flex flex-col items-start space-y-6 sm:space-y-8 w-full max-w-5xl">
                {applicationRequirements.map((req, index) => (
                   <div key={index} className="flex items-center gap-4 group hover:translate-x-2 transition-transform duration-300">
-                     <img
+                     <Image
+                        width={1920}
+                        height={1080}
                         src="/images/20.png"
                         alt="check illustration"
                         className="w-6 sm:w-8 h-auto flex-shrink-0"
@@ -167,7 +176,9 @@ const ForFellows = () => {
                   FAQs
                </h2>
                <div className="absolute -top-3 md:-top-5 left-1/2 transform -translate-x-1/2 lg:translate-x-[calc(-50%)] z-0">
-                  <img
+                  <Image
+                     width={1920}
+                     height={1080}
                      src="/images/14.png"
                      alt="circle header illustration"
                      className="w-32 sm:w-44 h-auto max-w-4xl mx-auto"
@@ -184,7 +195,9 @@ const ForFellows = () => {
                         className="flex w-full justify-between items-center py-4 px-4 cursor-pointer"
                      >
                         <div className="flex items-center gap-4">
-                           <img
+                           <Image
+                              width={1920}
+                              height={1080}
                               src="/images/21.png"
                               alt="check illustration"
                               className="w-auto sm:w-8 h-8 flex-shrink-0"

@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 const Goals = () => {
    const goals = [
       "Increase the volume of high-quality academic research produced by young scholars from the university and consumed by policymakers.",
@@ -30,7 +32,9 @@ const Goals = () => {
             ))}
          </div>
 
-         <img
+         <Image
+            width={500}
+            height={500}
             src="/images/8.png"
             alt="leaf illustration"
             className="absolute -bottom-1/4 w-64 sm:w-96 -right-[2%] h-auto opacity-50 sm:opacity-100"

@@ -1,16 +1,21 @@
 import Link from 'next/link';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faXTwitter, faInstagram, faLinkedin } from '@fortawesome/free-brands-svg-icons';
+import Image from 'next/image';
 
 export default function Footer() {
   return (
     <footer className="relative text-black font-neue overflow-hidden">
-      <img
+      <Image
+        width={1000}
+        height={1000}
         src="/images/9.png"
         alt="orange lines illustration"
         className="absolute top-20 left-[-5%] w-[95%] z-0"
       />
-      <img
+      <Image
+        width={1000}
+        height={1000}
         src="/images/19.png"
         alt="green lines illustration"
         className="absolute -bottom-4 lg:-bottom-[25%] -right-[25%] w-[95%] z-0"

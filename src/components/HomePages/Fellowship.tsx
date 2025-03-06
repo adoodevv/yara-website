@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 
 const Fellowship = () => {
    return (
@@ -21,23 +22,31 @@ const Fellowship = () => {
                </Link>
             </div>
          </div>
-         <img
+         <Image
+            width={500}
+            height={500}
             src="/images/16.png"
             alt="gear illustration"
             className="absolute right-[30%] md:right-[35%] lg:right-[40%] -top-[2%] md:top-0 lg:top-[15%] w-[11%] md:w-[8%] lg:w-[5%]"
             style={{ transform: 'scaleX(-1)' }}
          />
-         <img
+         <Image
+            width={500}
+            height={500}
             src="/images/13.png"
             alt="head illustration"
             className="absolute left-[15%] md:left-[20%] lg:left-[25%] top-[22%] md:top-[32%] lg:top-[50%] w-[11%] md:w-[8%] lg:w-[5%]"
          />
-         <img
+         <Image
+            width={500}
+            height={500}
             src="/images/1.png"
             alt="rocket illustration"
             className="absolute right-[15%] md:right-[20%] lg:right-[25%] top-[25%] md:top-[35%] lg:top-[45%] w-[11%] md:w-[8%] lg:w-[5%]"
          />
-         <img
+         <Image
+            width={500}
+            height={500}
             src="/images/22.png"
             alt="bulb illustration"
             className="absolute left-[27%] md:left-[33%] lg:left-[38%] -top-4 md:-top-2 lg:top-[12%] w-[11%] md:w-[8%] lg:w-[5%]"

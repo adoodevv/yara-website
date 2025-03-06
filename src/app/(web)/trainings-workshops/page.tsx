@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 const TrainingsWorkshops = () => {
    const focusAreas = [
       "Research methodologies & experimental design",
@@ -43,7 +45,9 @@ const TrainingsWorkshops = () => {
                      key={index}
                      className="flex items-start sm:items-center gap-3 sm:gap-4 w-full group hover:transform hover:translate-x-2 transition-transform duration-300"
                   >
-                     <img
+                     <Image
+                        width={500}
+                        height={500}
                         src="/images/20.png"
                         alt="check illustration"
                         className="w-8 sm:w-10 lg:w-12 h-auto flex-shrink-0 mt-1 sm:mt-0"

@@ -4,7 +4,6 @@ import "./styles/globals.css";
 import Header from "@/components/Header/Header";
 import Footer from "@/components/Footer/Footer";
 import localFont from 'next/font/local'
-import LoadingScreen from "./loading";
 
 const salted = localFont({
   src: './styles/fonts/Salted-Regular.otf',
