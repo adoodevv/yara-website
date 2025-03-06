@@ -1,9 +1,16 @@
-import { fullBlog } from "@/lib/interface"
 import { client, urlFor } from "@/lib/sanity"
 import { PortableText } from "next-sanity"
 import Image from "next/image"
 
 export const revalidate = 30
+
+// Update the interface to match what Sanity actually returns
+interface SanityBlog {
+   currentSlug: string;
+   title: string;
+   content: any; // This should be a Portable Text block, not a string
+   titleImage: any; // This should be a Sanity image reference, not an ImageType
+}
 
 async function getData(slug: string) {
    const query = `
@@ -13,13 +20,26 @@ async function getData(slug: string) {
       content,
       titleImage
    }[0]`
-
    const data = await client.fetch(query)
    return data
 }
 
+export async function generateStaticParams() {
+   const query = `*[_type == 'blog'] { "slug": slug.current }`
+   const slugs = await client.fetch(query)
+
+   return slugs.map((slug: { slug: string }) => ({
+      slug: slug.slug,
+   }))
+}
+
 export default async function BlogArticle({ params }: { params: { slug: string } }) {
-   const data: fullBlog = await getData(params.slug)
+   const data: SanityBlog = await getData(params.slug)
+
+   // Make sure data exists before rendering
+   if (!data) {
+      return <div>Blog post not found</div>
+   }
 
    return (
       <div className="flex flex-col items-center justify-center">
@@ -31,9 +51,18 @@ export default async function BlogArticle({ params }: { params: { slug: string }
                {data.title}
             </span>
          </h1>
-         <Image src={urlFor(data.titleImage).url()} alt={data.title} width={800} height={800} priority className="rounded-lg mt-5" />
+         {data.titleImage && (
+            <Image
+               src={urlFor(data.titleImage).url()}
+               alt={data.title || "Blog image"}
+               width={800}
+               height={800}
+               priority
+               className="rounded-lg mt-5"
+            />
+         )}
          <div className="mt-16 prose prose-lg">
-            <PortableText value={data.content} />
+            {data.content && <PortableText value={data.content} />}
          </div>
       </div>
    )
