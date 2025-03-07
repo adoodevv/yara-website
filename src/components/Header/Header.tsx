@@ -4,6 +4,7 @@ import { useState } from 'react';
 import { Squash as HamburgerSquash } from 'hamburger-react';
 import { ChevronDown } from "lucide-react";
 import { motion } from "framer-motion";
+import Image from 'next/image';
 
 const Header = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -31,7 +32,14 @@ const Header = () => {
       <header className="fixed flex top-0 w-full bg-gray-200/80 backdrop-blur-sm z-40 border-b border-gray-300 h-20">
         <div className="container mx-auto px-4 py-3 flex justify-between items-center">
           <div className="flex items-center">
-            <Link href="/" className="text-2xl font-bold">YARA</Link>
+            <Link href="/">
+              <Image
+                src="/images/Yara-logo-black.png"
+                alt="YARA Logo"
+                width={85}
+                height={85}
+              />
+            </Link>
           </div>
 
           {/* Desktop Navigation */}
@@ -122,7 +130,7 @@ const Header = () => {
             <HamburgerSquash
               toggled={mobileMenuOpen}
               toggle={toggleMobileMenu}
-              size={20}
+              size={25}
               duration={0.5}
               easing='ease-in'
             />

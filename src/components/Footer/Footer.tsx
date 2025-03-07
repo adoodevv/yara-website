@@ -36,7 +36,6 @@ export default function Footer() {
               <li><Link href="/get-to-know-us" className="hover:text-purple-600 transition">About Us</Link></li>
               <li><Link href="/what-we-do" className="hover:text-purple-600 transition">Fellowship Program</Link></li>
               <li><Link href="/apply" className="hover:text-purple-600 transition">How to Apply</Link></li>
-              <li><Link href="/news" className="hover:text-purple-600 transition">Contact Us</Link></li>
             </ul>
           </div>
 
@@ -67,8 +66,8 @@ export default function Footer() {
           <div>
             <h3 className="text-2xl md:text-4xl font-bold mb-4">Contact</h3>
             <ul className="space-y-2 font-roman text-lg md:text-2xl">
-              <li><a href="mailto:info@yara.org" className="hover:text-purple-600 transition">info@yara.org</a></li>
-              <li><a href="tel:+233123456789" className="hover:text-purple-600 transition">+233 123 456 789</a></li>
+              <li><a href="mailto:info@yara.org" className="hover:text-purple-600 transition">yafricaresearch@gmail.com</a></li>
+              <li><a href="tel:+233123456789" className="hover:text-purple-600 transition">+233 55 393 0543</a></li>
             </ul>
           </div>
 

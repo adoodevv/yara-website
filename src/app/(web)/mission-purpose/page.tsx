@@ -30,14 +30,14 @@ const MissionAndPurpose = () => {
                   height={500}
                   src="/images/7.png"
                   alt="leaf illustration"
-                  className="z-0 absolute opacity-50 sm:opacity-100 top-16 w-1/4 sm:w-1/3 left-0 sm:left-[-5%] h-auto"
+                  className="z-0 absolute opacity-50 sm:opacity-100 top-16 w-[25%] left-0 sm:left-[-5%] h-auto"
                />
                <Image
                   width={500}
                   height={500}
                   src="/images/17.png"
                   alt="leaf illustration"
-                  className="z-0 absolute opacity-50 sm:opacity-100 bottom-1/5 w-1/4 sm:w-1/3 right-0 h-auto"
+                  className="z-0 absolute opacity-50 sm:opacity-100 bottom-1/5 w-[25%] right-0 h-auto"
                />
             </div>
 

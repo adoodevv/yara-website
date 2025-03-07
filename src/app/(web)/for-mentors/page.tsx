@@ -76,9 +76,11 @@ const ForMentors = () => {
 
          {/* CTA Button */}
          <div className="flex justify-center items-center py-8 sm:py-12">
-            <button className="font-light text-lg sm:text-xl px-6 sm:px-8 py-3 sm:py-4 border border-black text-black rounded-full hover:bg-black hover:text-white transition-all duration-700 transform hover:scale-105">
-               Apply Here
-            </button>
+            <a href="https://forms.gle/pgPFcEeR4TG2UtX4A" target="_blank" rel="noopener noreferrer">
+               <button className="font-light text-lg sm:text-xl px-6 sm:px-8 py-3 sm:py-4 border border-black text-black rounded-full hover:bg-black hover:text-white transition-all duration-700">
+                  Apply Here
+               </button>
+            </a>
          </div>
 
          {/* About Section */}
@@ -105,7 +107,7 @@ const ForMentors = () => {
                height={500}
                src="/images/12.png"
                alt="paper illustration"
-               className="absolute -top-20 -left-[10%] md:-left-[17%] sm:-left-[30%] w-40 sm:w-48 lg:w-60 h-auto opacity-50 sm:opacity-100"
+               className="absolute -top-20 -left-[10%] md:-left-[17%] lg:-left-[30%] w-40 sm:w-48 lg:w-60 h-auto opacity-50 sm:opacity-100"
             />
          </div>
 

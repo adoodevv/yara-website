@@ -7,31 +7,31 @@ const WhatsNew = () => {
             <div className="flex flex-col lg:flex-row items-center justify-center gap-8 lg:gap-12">
                <div className="lg:w-1/2">
                   <div className="grid grid-cols-2 gap-3 sm:gap-4 justify-items-end">
-                     <div className="col-span-2 overflow-hidden rounded-[20px] sm:rounded-[30px]">
+                     <div className="col-span-2 rounded-[20px] sm:rounded-[30px]">
                         <Image
                            width={1000}
                            height={1000}
                            src="https://images.unsplash.com/photo-1581093588401-fbb62a02f120?ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=80"
                            alt="Researcher working"
-                           className="scale-animation rounded-[20px] sm:rounded-[30px] shadow-md w-full"
+                           className="rounded-[20px] sm:rounded-[30px] shadow-md w-full hover:scale-105 transition-all duration-700"
                         />
                      </div>
-                     <div className="overflow-hidden rounded-[20px] sm:rounded-[30px]">
+                     <div className="rounded-[20px] sm:rounded-[30px]">
                         <Image
                            width={1000}
                            height={1000}
                            src="https://images.unsplash.com/photo-1576086213369-97a306d36557?ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=80"
                            alt="Lab research"
-                           className="scale-animation rounded-[20px] sm:rounded-[30px] shadow-md w-full"
+                           className="rounded-[20px] sm:rounded-[30px] shadow-md w-full hover:scale-105 transition-all duration-700"
                         />
                      </div>
-                     <div className="overflow-hidden rounded-[20px] sm:rounded-[30px]">
+                     <div className="rounded-[20px] sm:rounded-[30px]">
                         <Image
                            width={1000}
                            height={1000}
                            src="https://images.unsplash.com/photo-1582719508461-905c673771fd?ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=80"
                            alt="STEM education"
-                           className="scale-animation rounded-[20px] sm:rounded-[30px] shadow-md w-full"
+                           className="rounded-[20px] sm:rounded-[30px] shadow-md w-full hover:scale-105 transition-all duration-700"
                         />
                      </div>
                   </div>

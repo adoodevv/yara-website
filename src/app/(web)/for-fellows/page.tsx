@@ -92,9 +92,11 @@ const ForFellows = () => {
 
          {/* CTA Button */}
          <div className="flex justify-center items-center py-4 sm:py-8">
-            <button className="font-light text-lg sm:text-xl px-6 sm:px-8 py-3 sm:py-4 border border-black text-black rounded-full hover:bg-black hover:text-white transition-all duration-700">
-               Apply Now
-            </button>
+            <a href="https://forms.gle/9kqw4iBvXJWAZZgK7" target="_blank" rel="noopener noreferrer">
+               <button className="font-light text-lg sm:text-xl px-6 sm:px-8 py-3 sm:py-4 border border-black text-black rounded-full hover:bg-black hover:text-white transition-all duration-700">
+                  Apply Now
+               </button>
+            </a>
          </div>
 
          {/* Eligibility Criteria */}
