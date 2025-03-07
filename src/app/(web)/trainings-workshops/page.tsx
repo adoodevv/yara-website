@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 const TrainingsWorkshops = () => {
    const focusAreas = [
@@ -62,9 +63,11 @@ const TrainingsWorkshops = () => {
 
          {/* CTA Button Section */}
          <div className="flex justify-center items-center py-8 sm:py-12 px-4 sm:px-6">
-            <button className="font-neue font-light text-base sm:text-lg px-6 sm:px-8 py-3 sm:py-4 border border-black text-black rounded-full hover:bg-black hover:text-white transition-all duration-700">
-               Join our upcoming workshops & bootcamps!
-            </button>
+            <Link href="/whats-new">
+               <button className="font-neue font-light text-base sm:text-lg px-6 sm:px-8 py-3 sm:py-4 border border-black text-black rounded-full hover:bg-black hover:text-white transition-all duration-700">
+                  Join our upcoming workshops & bootcamps!
+               </button>
+            </Link>
          </div>
       </>
    );

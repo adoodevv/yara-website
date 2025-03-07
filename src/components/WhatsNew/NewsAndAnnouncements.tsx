@@ -67,9 +67,11 @@ const NewsAndAnnouncements = () => {
             <div>
                <h2 className="text-2xl sm:text-3xl font-bold mb-3 sm:mb-4">Upcoming Event</h2>
                <h3 className="text-lg sm:text-xl mb-4 sm:mb-6">Join Our Research Bootcamp</h3>
-               <button className="font-light px-4 sm:px-6 py-2 border border-black rounded-full hover:bg-black hover:text-white transition-colors">
-                  Apply Now
-               </button>
+               <a href="https://forms.gle/9kqw4iBvXJWAZZgK7" target="_blank" rel="noopener noreferrer">
+                  <button className="font-light text-lg sm:text-xl px-6 sm:px-8 py-3 sm:py-4 border border-black text-black rounded-full hover:bg-black hover:text-white transition-all duration-700">
+                     Apply Now
+                  </button>
+               </a>
             </div>
          </section>
       </div>

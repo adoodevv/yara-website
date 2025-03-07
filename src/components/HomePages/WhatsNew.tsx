@@ -13,7 +13,7 @@ const WhatsNew = () => {
                            height={1000}
                            src="https://images.unsplash.com/photo-1581093588401-fbb62a02f120?ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=80"
                            alt="Researcher working"
-                           className="img scale-animation rounded-[20px] sm:rounded-[30px] shadow-md w-full"
+                           className="scale-animation rounded-[20px] sm:rounded-[30px] shadow-md w-full"
                         />
                      </div>
                      <div className="overflow-hidden rounded-[20px] sm:rounded-[30px]">
@@ -22,7 +22,7 @@ const WhatsNew = () => {
                            height={1000}
                            src="https://images.unsplash.com/photo-1576086213369-97a306d36557?ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=80"
                            alt="Lab research"
-                           className="img scale-animation rounded-[20px] sm:rounded-[30px] shadow-md w-full"
+                           className="scale-animation rounded-[20px] sm:rounded-[30px] shadow-md w-full"
                         />
                      </div>
                      <div className="overflow-hidden rounded-[20px] sm:rounded-[30px]">
@@ -31,7 +31,7 @@ const WhatsNew = () => {
                            height={1000}
                            src="https://images.unsplash.com/photo-1582719508461-905c673771fd?ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=80"
                            alt="STEM education"
-                           className="img scale-animation rounded-[20px] sm:rounded-[30px] shadow-md w-full"
+                           className="scale-animation rounded-[20px] sm:rounded-[30px] shadow-md w-full"
                         />
                      </div>
                   </div>

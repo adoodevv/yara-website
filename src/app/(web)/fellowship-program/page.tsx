@@ -164,9 +164,11 @@ const FellowshipProgram = () => {
 
          {/* Apply Button */}
          <div className="flex justify-center items-center pt-4 sm:pt-8 pb-12">
-            <button className="font-neue font-light text-lg sm:text-xl mt-4 sm:mt-8 px-6 sm:px-8 py-3 sm:py-4 border border-black text-black rounded-full hover:bg-black hover:text-white transition-all duration-700">
-               Apply Now
-            </button>
+            <a href="https://forms.gle/9kqw4iBvXJWAZZgK7" target="_blank" rel="noopener noreferrer">
+               <button className="font-light text-lg sm:text-xl px-6 sm:px-8 py-3 sm:py-4 border border-black text-black rounded-full hover:bg-black hover:text-white transition-all duration-700">
+                  Apply Now
+               </button>
+            </a>
          </div>
       </>
    );

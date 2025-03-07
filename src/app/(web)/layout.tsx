@@ -60,6 +60,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        <link rel="icon" href="/images/yara-logo-white.png" />
+      </head>
       <body className={`${neue.variable} ${salted.variable} font-sans`}>
         <Providers>
           <main className="bg-gray-200">

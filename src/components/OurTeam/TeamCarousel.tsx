@@ -7,42 +7,35 @@ import Image from "next/image";
 
 const teamMembers = [
    {
+      name: "Nana Akua Acheampomaa Atuahene",
+      role: "Program & Partnership Manager",
+      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed diam nonummy nibh euismod tincidunt ut.",
+      image: "/images/akua.jpg",
+   },
+   {
       name: "Isaac Aboah",
-      role: "Founder",
+      role: "Cofounder & Executive Director",
       description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed diam nonummy nibh euismod tincidunt ut.",
-      image: "/images/png-aura.com.png",
+      image: "/images/ceo.jpg",
    },
    {
-      name: "Jane Doe",
-      role: "CTO",
+      name: "Isaac Baiden",
+      role: "Cofounder & Research Director",
       description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed diam nonummy nibh euismod tincidunt ut.",
-      image: "/images/png-aura.com (1).png",
+      image: "/images/isaac.jpg",
    },
    {
-      name: "John Smith",
-      role: "CFO",
+      name: "Justice Essiel",
+      role: "Technology Associate",
       description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed diam nonummy nibh euismod tincidunt ut.",
-      image: "/images/png-aura.com.png",
-   },
-   {
-      name: "Emily Johnson",
-      role: "Designer",
-      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed diam nonummy nibh euismod tincidunt ut.",
-      image: "/images/png-aura.com (1).png",
-   },
-   {
-      name: "Michael Brown",
-      role: "Engineer",
-      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed diam nonummy nibh euismod tincidunt ut.",
-      image: "/images/png-aura.com.png",
+      image: "/images/justice.jpg",
    },
 ];
 
 const TeamCarousel = () => {
-   const [selectedIndex, setSelectedIndex] = useState(2);
+   const [selectedIndex, setSelectedIndex] = useState(1);
    const [visibleMembers, setVisibleMembers] = useState<typeof teamMembers>([]);
 
-   // Fixed: Added selectedIndex to the dependency array
    const updateVisibleMembers = useCallback(() => {
       const screenWidth = typeof window !== 'undefined' ? window.innerWidth : 1024;
       let membersToShow;
@@ -61,24 +54,21 @@ const TeamCarousel = () => {
       ));
 
       setVisibleMembers(teamMembers.slice(start, start + membersToShow));
-   }, [selectedIndex]); // Added selectedIndex as dependency
+   }, [selectedIndex]);
 
-   // Fixed: Added updateVisibleMembers to the dependency array
    useEffect(() => {
       updateVisibleMembers();
 
-      // Add window resize handler
       const handleResize = () => {
          updateVisibleMembers();
       };
 
       window.addEventListener('resize', handleResize);
 
-      // Clean up event listener on component unmount
       return () => {
          window.removeEventListener('resize', handleResize);
       };
-   }, [updateVisibleMembers]); // Added updateVisibleMembers as dependency
+   }, [updateVisibleMembers]);
 
    const handlePrevious = () => {
       setSelectedIndex((prev) => (prev > 0 ? prev - 1 : prev));
@@ -110,7 +100,7 @@ const TeamCarousel = () => {
             </>
 
             {/* Team Members Gallery */}
-            <div className="flex justify-center items-center space-x-4 sm:space-x-8 md:space-x-16 overflow-hidden py-4">
+            <div className="flex justify-center items-center space-x-4 sm:space-x-8 md:space-x-16 py-4">
                {visibleMembers.map((member) => (
                   <div
                      key={`member-${member.name}`}
