@@ -111,7 +111,7 @@ const PrivacyPolicyPage = () => {
                   We maintain the following retention policies for your information:
                </p>
                <ul className="list-disc list-inside font-roman text-lg sm:text-xl lg:text-2xl max-w-5xl mt-4 px-4">
-                  <li><span className="font-medium">Application Data: </span>We retain unsuccessful applicants' data for one year after the application cycle for potential future opportunities, unless you request deletion. Successful applicants' data is retained for the duration of the fellowship and up to five years post-completion to support career development and alumni networking.</li>
+                  <li><span className="font-medium">Application Data: </span>We retain unsuccessful applicants&apos; data for one year after the application cycle for potential future opportunities, unless you request deletion. Successful applicants&apos; data is retained for the duration of the fellowship and up to five years post-completion to support career development and alumni networking.</li>
                   <li><span className="font-medium">Research Outputs: </span>Research papers, presentations, or abstracts may be retained indefinitely for academic purposes, with personal identifiers removed unless you consent otherwise.</li>
                   <li><span className="font-medium">Website Usage Data: </span>Anonymized data may be kept indefinitely for analytics; identifiable data is deleted within one year unless needed for legal purposes.</li>
                </ul>
@@ -155,7 +155,7 @@ const PrivacyPolicyPage = () => {
                   10. Your Rights
                </h2>
                <p className="font-roman text-lg sm:text-xl lg:text-2xl max-w-5xl mt-4 px-4">
-                  Under applicable data protection laws (e.g., Ghana's Data Protection Act, 2012), you have the right to:
+                  Under applicable data protection laws (e.g., Ghana&apos;s Data Protection Act, 2012), you have the right to:
                </p>
                <ul className="list-disc list-inside font-roman text-lg sm:text-xl lg:text-2xl max-w-5xl mt-4 px-4">
                   <li><span className="font-medium">Access: </span>Request a copy of your personal data we hold.</li>
@@ -180,7 +180,7 @@ const PrivacyPolicyPage = () => {
             </div>
             <div className="font-neue flex flex-col items-center justify-center px-4 pb-16">
                <h2 className="font-medium text-2xl sm:text-3xl md:text-4xl tracking-tight text-black text-center">
-                  12. Children's Privacy
+                  12. Children&apos;s Privacy
                </h2>
                <p className="font-roman text-lg sm:text-xl lg:text-2xl max-w-5xl mt-4 px-4">
                   The YARA Fellowship Program is intended for undergraduate students aged 18 and older. We do not knowingly collect data from individuals under 18. If we discover such data has been collected, we will delete it promptly.

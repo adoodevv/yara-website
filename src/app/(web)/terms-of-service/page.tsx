@@ -24,7 +24,7 @@ const TermsOfServicePage = () => {
                   1. About YARA
                </h2>
                <p className="font-roman text-lg sm:text-xl lg:text-2xl max-w-5xl mt-4 px-4 text-center">
-                  The Young Africans Research Academy (YARA) is a Pan-African initiative designed to train and mentor undergraduate students in Ghana and across Africa in research across various disciplines. Our mission is to develop the next generation of indigenous researchers committed to solving Africa's most pressing problems through high-quality, ethical, and relevant research.
+                  The Young Africans Research Academy (YARA) is a Pan-African initiative designed to train and mentor undergraduate students in Ghana and across Africa in research across various disciplines. Our mission is to develop the next generation of indigenous researchers committed to solving Africa&apos;s most pressing problems through high-quality, ethical, and relevant research.
                </p>
                <p className="font-roman text-lg sm:text-xl lg:text-2xl max-w-5xl mt-4 px-4 text-center">
                   <span className="font-medium">Contact Us:</span><br />
@@ -44,11 +44,11 @@ const TermsOfServicePage = () => {
                <ul className="list-disc list-inside font-roman text-lg sm:text-xl lg:text-2xl max-w-5xl mt-4 px-4">
                   <li>Be an undergraduate student currently enrolled at a recognized university.</li>
                   <li>Be at least 18 years of age.</li>
-                  <li>Have a demonstrated interest in research and a commitment to completing the Program's requirements if selected.</li>
-                  <li>Reside in Ghana or be eligible under the Program's Pan-African scope (specific eligibility criteria are outlined in the Fellowship Application documents).</li>
+                  <li>Have a demonstrated interest in research and a commitment to completing the Program&apos;s requirements if selected.</li>
+                  <li>Reside in Ghana or be eligible under the Program&apos;s Pan-African scope (specific eligibility criteria are outlined in the Fellowship Application documents).</li>
                </ul>
                <p className="font-roman text-lg sm:text-xl lg:text-2xl max-w-5xl mt-4 px-4">
-                  YARA reserves the right to determine eligibility and reject applications that do not meet these criteria or the Program's standards.
+                  YARA reserves the right to determine eligibility and reject applications that do not meet these criteria or the Program&apos;s standards.
                </p>
             </div>
 
@@ -77,7 +77,7 @@ const TermsOfServicePage = () => {
                   </p>
                   <ul className="list-disc list-inside font-roman text-lg sm:text-xl lg:text-2xl max-w-5xl px-4">
                      <li>Use the Website for any unlawful, fraudulent, or harmful purpose.</li>
-                     <li>Attempt to interfere with, damage, or disrupt the Website's functionality, security, or integrity (e.g., hacking, introducing malware).</li>
+                     <li>Attempt to interfere with, damage, or disrupt the Website&apos;s functionality, security, or integrity (e.g., hacking, introducing malware).</li>
                      <li>Misrepresent your identity or provide false information during the application process.</li>
                      <li>Copy, reproduce, or distribute Website content without prior written permission from YARA, except as permitted for personal, non-commercial use.</li>
                   </ul>
@@ -97,7 +97,7 @@ const TermsOfServicePage = () => {
                   </h3>
                   <ul className="list-disc list-inside font-roman text-lg sm:text-xl lg:text-2xl max-w-5xl px-4">
                      <li>To apply, you must submit accurate and complete information as outlined in the Fellowship Application, including personal details, academic records, and supporting documents.</li>
-                     <li>Submission of an application does not guarantee acceptance into the Program. YARA's selection committee will review applications and notify shortlisted applicants of next steps.</li>
+                     <li>Submission of an application does not guarantee acceptance into the Program. YARA&apos;s selection committee will review applications and notify shortlisted applicants of next steps.</li>
                      <li>You agree not to submit AI-generated or plagiarized content in your application materials, as this may result in disqualification.</li>
                   </ul>
 
@@ -109,7 +109,7 @@ const TermsOfServicePage = () => {
                   </p>
                   <ul className="list-disc list-inside font-roman text-lg sm:text-xl lg:text-2xl max-w-5xl px-4">
                      <li>Participate fully in all required activities, including online sessions, summer research programs, boot camps, and mentorship meetings.</li>
-                     <li>Adhere to YARA's Code of Conduct, research ethics guidelines, and academic integrity standards (to be provided upon acceptance).</li>
+                     <li>Adhere to YARA&apos;s Code of Conduct, research ethics guidelines, and academic integrity standards (to be provided upon acceptance).</li>
                      <li>Submit a final research paper/report and present your findings at the YARA Research Symposium as part of the graduation criteria.</li>
                   </ul>
 
@@ -120,8 +120,8 @@ const TermsOfServicePage = () => {
                      YARA may terminate your participation in the Program if you:
                   </p>
                   <ul className="list-disc list-inside font-roman text-lg sm:text-xl lg:text-2xl max-w-5xl px-4">
-                     <li>Fail to meet the Program's requirements or deadlines without valid justification.</li>
-                     <li>Engage in misconduct, including plagiarism, unethical research practices, or behavior that harms the Program's reputation.</li>
+                     <li>Fail to meet the Program&apos;s requirements or deadlines without valid justification.</li>
+                     <li>Engage in misconduct, including plagiarism, unethical research practices, or behavior that harms the Program&apos;s reputation.</li>
                      <li>Provide false information during or after the application process.</li>
                   </ul>
                </div>
@@ -143,13 +143,13 @@ const TermsOfServicePage = () => {
                   </p>
 
                   <h3 className="font-medium text-xl sm:text-2xl md:text-3xl tracking-tight text-black py-4 text-center">
-                     b. YARA's Content
+                     b. YARA&apos;s Content
                   </h3>
                   <p className="font-roman text-lg sm:text-xl lg:text-2xl max-w-5xl px-4">
                      All content on the Website, including text, logos, designs, and training materials, is owned by YARA or its licensors and protected by copyright and other intellectual property laws.
                   </p>
                   <p className="font-roman text-lg sm:text-xl lg:text-2xl max-w-5xl mt-4 px-4">
-                     You may not use, modify, or distribute YARA's content without prior written permission, except for personal use related to the Program.
+                     You may not use, modify, or distribute YARA&apos;s content without prior written permission, except for personal use related to the Program.
                   </p>
                </div>
             </div>
@@ -240,7 +240,7 @@ const TermsOfServicePage = () => {
                   Address: 6 Fifth Avenue, Haatso-Accra. Ghana
                </p>
                <p className="font-roman text-lg sm:text-xl lg:text-2xl max-w-5xl mt-8 px-4 text-center italic">
-                  Thank you for engaging with the Young Africans Research Academy. We look forward to supporting your research journey across any discipline as we work together to address Africa's challenges.
+                  Thank you for engaging with the Young Africans Research Academy. We look forward to supporting your research journey across any discipline as we work together to address Africa&apos;s challenges.
                </p>
             </div>
          </section>
