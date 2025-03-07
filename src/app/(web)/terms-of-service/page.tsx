@@ -14,7 +14,7 @@ const TermsOfServicePage = () => {
                      Last Updated: March 07, 2025
                   </p>
                   <p className="font-roman text-lg sm:text-xl md:text-2xl max-w-6xl mt-4 sm:mt-8 px-2">
-                     Welcome to the Young Africans Research Academy (YARA) website. These Terms of Service ("Terms") govern your access to and use of the YARA website (the "Website"), your application to the YARA Fellowship Program (the "Program"), and your participation in Program activities. By accessing the Website, submitting an application, or participating in the Program, you agree to be bound by these Terms. If you do not agree, please do not use the Website or engage with the Program.
+                     Welcome to the Young Africans Research Academy (YARA) website. These Terms of Service (&quot;Terms&quot;) govern your access to and use of the YARA website (the &quot;Website&quot;), your application to the YARA Fellowship Program (the &quot;Program&quot;), and your participation in Program activities. By accessing the Website, submitting an application, or participating in the Program, you agree to be bound by these Terms. If you do not agree, please do not use the Website or engage with the Program.
                   </p>
                </div>
             </div>
@@ -168,7 +168,7 @@ const TermsOfServicePage = () => {
                   7. Disclaimers
                </h2>
                <ul className="list-disc list-inside font-roman text-lg sm:text-xl lg:text-2xl max-w-5xl mt-4 px-4">
-                  <li><span className="font-medium">Website Availability: </span>The Website is provided "as is" and "as available." YARA does not guarantee uninterrupted access or error-free operation.</li>
+                  <li><span className="font-medium">Website Availability: </span>The Website is provided &quot;as is&quot; and &quot;as available.&quot; YARA does not guarantee uninterrupted access or error-free operation.</li>
                   <li><span className="font-medium">Program Outcomes: </span>Acceptance into the Program does not guarantee specific career outcomes, publication of research, or funding opportunities. YARA provides mentorship and resources but cannot ensure individual success.</li>
                   <li><span className="font-medium">Accuracy of Information: </span>While we strive to provide accurate and up-to-date information, YARA is not liable for errors or omissions on the Website or in Program materials.</li>
                </ul>
@@ -213,7 +213,7 @@ const TermsOfServicePage = () => {
                   11. Changes to These Terms
                </h2>
                <p className="font-roman text-lg sm:text-xl lg:text-2xl max-w-5xl mt-4 px-4 text-center">
-                  We may update these Terms to reflect changes in our practices, Program structure, or legal requirements. The updated version will be posted on this page with a revised "Last Updated" date. Continued use of the Website or participation in the Program after changes constitutes acceptance of the revised Terms.
+                  We may update these Terms to reflect changes in our practices, Program structure, or legal requirements. The updated version will be posted on this page with a revised &quot;Last Updated&quot; date. Continued use of the Website or participation in the Program after changes constitutes acceptance of the revised Terms.
                </p>
             </div>
 

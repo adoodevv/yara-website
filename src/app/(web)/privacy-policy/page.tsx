@@ -191,7 +191,7 @@ const PrivacyPolicyPage = () => {
                   13. Changes to This Privacy Policy
                </h2>
                <p className="font-roman text-lg sm:text-xl lg:text-2xl max-w-5xl mt-4 px-4">
-                  We may update this policy to reflect changes in our practices or legal requirements. The updated version will be posted on this page with a revised "Last Updated" date. We encourage you to review it periodically.
+                  We may update this policy to reflect changes in our practices or legal requirements. The updated version will be posted on this page with a revised &quot;Last Updated&quot; date. We encourage you to review it periodically.
                </p>
             </div>
             <div className="font-neue flex flex-col items-center justify-center px-4 pb-16">
