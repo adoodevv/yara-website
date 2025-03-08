@@ -9,31 +9,37 @@ const teamMembers = [
    {
       name: "Nana Akua Acheampomaa Atuahene",
       role: "Program & Partnership Manager",
-      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed diam nonummy nibh euismod tincidunt ut.",
+      description: "",
       image: "/images/akua.jpg",
+   },
+   {
+      name: "Okai Ayea Peter",
+      role: "Programs Assistant",
+      description: "The Co-Founder of Ecofundme and CTO at Ecoclime Africa. Ecofundme is the world's most advanced Climate Finance application. Its solves the funding and accountability gap in the climate financing market.",
+      image: "/images/peter.jpg",
    },
    {
       name: "Isaac Aboah",
       role: "Cofounder & Executive Director",
-      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed diam nonummy nibh euismod tincidunt ut.",
+      description: "",
       image: "/images/ceo.jpg",
    },
    {
       name: "Isaac Baiden",
       role: "Cofounder & Research Director",
-      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed diam nonummy nibh euismod tincidunt ut.",
+      description: "A medical doctor and a dedicated PhD candidate in the Department of Physiology at Wayne State University, with a strong research focus on cardiorenal physiology, hypertension, and diuretic resistance.",
       image: "/images/isaac.jpg",
    },
    {
       name: "Justice Essiel",
       role: "Technology Associate",
-      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed diam nonummy nibh euismod tincidunt ut.",
+      description: "",
       image: "/images/justice.jpg",
    },
 ];
 
 const TeamCarousel = () => {
-   const [selectedIndex, setSelectedIndex] = useState(1);
+   const [selectedIndex, setSelectedIndex] = useState(2);
    const [visibleMembers, setVisibleMembers] = useState<typeof teamMembers>([]);
 
    const updateVisibleMembers = useCallback(() => {
@@ -131,7 +137,7 @@ const TeamCarousel = () => {
             <h2 className="text-xl sm:text-2xl font-medium">
                {teamMembers[selectedIndex].name}
             </h2>
-            <p className="font-salted text-2xl sm:text-3xl text-blue-500 uppercase mt-2">
+            <p className="font-salted text-2xl sm:text-3xl text-purple-600 uppercase mt-2">
                {teamMembers[selectedIndex].role}
             </p>
             {teamMembers[selectedIndex].description && (

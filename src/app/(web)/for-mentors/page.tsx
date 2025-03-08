@@ -19,9 +19,9 @@ const ForMentors = () => {
    ];
 
    const keyDates = [
-      { label: "Application Deadline", date: "[Insert Date]" },
-      { label: "Mentor Matching", date: "[Insert Date]" },
-      { label: "Program Start Date", date: "[Insert Date]" }
+      { label: "Application Deadline", date: "6th April ,2025" },
+      { label: "Mentor Matching", date: "20th April , 2025" },
+      { label: "Program Start Date", date: "2nd May 2025" }
    ];
 
    return (
@@ -193,7 +193,7 @@ const ForMentors = () => {
                height={500}
                src="/images/4.png"
                alt="leaf illustration"
-               className="absolute -top-10 -left-[35%] w-2/3 h-auto opacity-80"
+               className="absolute -top-10 -left-[45%] w-2/3 h-auto opacity-80"
             />
             <div className="relative">
                <h2 className="font-medium text-2xl sm:text-3xl lg:text-4xl tracking-tight text-black">

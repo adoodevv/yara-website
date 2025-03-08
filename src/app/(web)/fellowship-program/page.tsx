@@ -1,5 +1,6 @@
 'use client'
 import Image from 'next/image';
+import Link from 'next/link';
 import { useEffect, useState } from 'react';
 
 const FellowshipProgram = () => {
@@ -164,11 +165,11 @@ const FellowshipProgram = () => {
 
          {/* Apply Button */}
          <div className="flex justify-center items-center pt-4 sm:pt-8 pb-12">
-            <a href="https://forms.gle/9kqw4iBvXJWAZZgK7" target="_blank" rel="noopener noreferrer">
+            <Link href="/for-fellows">
                <button className="font-light text-lg sm:text-xl px-6 sm:px-8 py-3 sm:py-4 border border-black text-black rounded-full hover:bg-black hover:text-white transition-all duration-700">
-                  Apply Now
+                  Learn More
                </button>
-            </a>
+            </Link>
          </div>
       </>
    );

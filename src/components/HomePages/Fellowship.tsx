@@ -15,7 +15,7 @@ const Fellowship = () => {
                   for undergraduate students in Ghana, focusing on research skills, mentorship,
                   and career development in STEM.
                </p>
-               <Link href="/mission-purpose">
+               <Link href="/for-fellows">
                   <button className="font-light mt-6 sm:mt-8 px-4 sm:px-6 py-2 sm:py-3 border-[1px] border-black text-black rounded-full hover:bg-black hover:text-white transition-all duration-700">
                      Learn More
                   </button>

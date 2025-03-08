@@ -18,7 +18,7 @@ const HeroSection = () => {
    return (
       <section className="font-neue relative flex flex-col items-center justify-center pb-20 pt-32 px-4 mt-16">
          <div className="relative z-10 text-center max-full mx-auto">
-            <h1 className="font-black text-5xl xs:text-6xl sm:text-5xl md:text-6xl lg:text-9xl tracking-tight text-black leading-tight sm:leading-normal">
+            <h1 className="font-black text-5xl xs:text-6xl sm:text-5xl md:text-6xl lg:text-9xl tracking-tight text-black leading-tight sm:leading-tight">
                {isMobile ? (
                   <>
                      YOUNG<br />

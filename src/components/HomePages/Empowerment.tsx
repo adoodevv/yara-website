@@ -14,7 +14,7 @@ const Empowerment = () => {
                   we equip undergraduate students with hands-on research experience, mentorship
                   from top-tier academics, and the tools to drive innovation in their fields.
                </p>
-               <div className="absolute top-0">
+               <div className="absolute top-0 md:top-10">
                   <div className="absolute inset-0 bg-gradient-to-t from-gray-200 via-gray-200/95 to-transparent z-10"></div>
                   <Image
                      width={1000}

@@ -31,7 +31,7 @@ const Header = () => {
       {/* Header Navigation */}
       <header className="fixed flex top-0 w-full bg-gray-200/80 backdrop-blur-sm z-40 border-b border-gray-300 h-20">
         <div className="container mx-auto px-4 py-3 flex justify-between items-center">
-          <div className="flex items-center">
+          <div className="flex items-center hover:-translate-y-1 transition-translate duration-700">
             <Link href="/">
               <Image
                 src="/images/Yara-logo-black.png"
@@ -44,10 +44,10 @@ const Header = () => {
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-8">
-            <div className="relative group">
+            <div className="relative group hover:-translate-y-1 transition-translate duration-700">
               <button
                 onClick={() => toggleDropdown('about')}
-                className="font-roman hover:text-purple-600 flex items-center"
+                className="font-roman flex items-center"
               >
                 About Us
                 <motion.div
@@ -72,10 +72,10 @@ const Header = () => {
               )}
             </div>
 
-            <div className="relative group">
+            <div className="relative group hover:-translate-y-1 transition-translate duration-700">
               <button
                 onClick={() => toggleDropdown('what-we-do')}
-                className="font-roman hover:text-purple-600 flex items-center"
+                className="font-roman flex items-center"
               >
                 What We Do
                 <motion.div
@@ -97,10 +97,10 @@ const Header = () => {
               )}
             </div>
 
-            <div className="relative group">
+            <div className="relative group hover:-translate-y-1 transition-translate duration-700">
               <button
                 onClick={() => toggleDropdown('how-to-apply')}
-                className="font-roman hover:text-purple-600 flex items-center"
+                className="font-roman flex items-center"
               >
                 How to Apply
                 <motion.div
@@ -122,7 +122,7 @@ const Header = () => {
               )}
             </div>
 
-            <Link href="/whats-new" className="font-roman hover:text-purple-600">What&apos;s New</Link>
+            <Link href="/whats-new" className="font-roman hover:-translate-y-1 transition-translate duration-700">What&apos;s New</Link>
           </nav>
 
           {/* Mobile Menu Button */}
