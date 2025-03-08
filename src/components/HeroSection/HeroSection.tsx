@@ -37,16 +37,29 @@ const HeroSection = () => {
                Nurturing the Next Generation of African Researchers
             </p>
          </div>
-         <div className="absolute top-10 md:-top-8">
+         <div className="absolute top-10 md:-top-8 animate-float">
             <div className="absolute inset-0 bg-gradient-to-t from-gray-200 via-gray-200/95 sm:via-gray-200 to-transparent"></div>
             <Image
                width={1000}
                height={1000}
                src="/images/10.png"
                alt="planet illustration"
-               className="w-3/4 right-0 h-auto max-w-4xl mx-auto"
+               className="w-3/4 right-0 h-auto max-w-4xl mx-auto animate-float"
             />
          </div>
+         <style jsx>{`
+            @keyframes float {
+               0%, 100% {
+                  transform: translateY(0);
+               }
+               50% {
+                  transform: translateY(-10px);
+               }
+            }
+            .animate-float {
+               animation: float 5s ease-in-out infinite;
+            }
+         `}</style>
       </section>
    );
 };

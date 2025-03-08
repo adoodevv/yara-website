@@ -23,7 +23,7 @@ const OurTeam = () => {
                   height={1000}
                   src="/images/22.png"
                   alt="bulb illustration"
-                  className="w-1/4 h-auto flex-shrink-0"
+                  className=" animate-float-item w-1/4 h-auto flex-shrink-0"
                />
             </div>
          </section>

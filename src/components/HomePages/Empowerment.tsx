@@ -14,13 +14,13 @@ const Empowerment = () => {
                   we equip undergraduate students with hands-on research experience, mentorship
                   from top-tier academics, and the tools to drive innovation in their fields.
                </p>
-               <div className="absolute top-0 md:top-10">
+               <div className="animate-rotate-item absolute top-0 md:top-10">
                   <div className="absolute inset-0 bg-gradient-to-t from-gray-200 via-gray-200/95 to-transparent z-10"></div>
                   <Image
                      width={1000}
                      height={1000}
                      src="/images/1.png"
-                     alt="planet illustration"
+                     alt="rocket illustration"
                      className="w-[50%] right-0 h-auto max-w-4xl mx-auto rotate-[235deg] z-0"
                   />
                </div>

@@ -7,8 +7,8 @@ const WhatsNew = () => {
          <div className="max-w-7xl mx-auto">
             <div className="flex flex-col lg:flex-row items-center justify-center gap-8 lg:gap-12">
                <div className="lg:w-1/2">
-                  <div className="grid grid-cols-2 gap-3 sm:gap-4 justify-items-end">
-                     <div className="col-span-2">
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4 justify-items-center lg:justify-items-end">
+                     <div className="col-span-1 sm:col-span-2">
                         <Link href="/whats-new">
                            <Image
                               width={1000}
@@ -19,7 +19,7 @@ const WhatsNew = () => {
                            />
                         </Link>
                      </div>
-                     <div>
+                     <div className="col-span-1">
                         <Link href="/whats-new">
                            <Image
                               width={1000}
@@ -30,7 +30,7 @@ const WhatsNew = () => {
                            />
                         </Link>
                      </div>
-                     <div>
+                     <div className="col-span-1">
                         <Link href="/whats-new">
                            <Image
                               width={1000}

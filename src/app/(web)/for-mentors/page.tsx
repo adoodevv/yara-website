@@ -107,7 +107,7 @@ const ForMentors = () => {
                height={500}
                src="/images/12.png"
                alt="paper illustration"
-               className="absolute -top-20 -left-[10%] md:-left-[17%] lg:-left-[30%] w-40 sm:w-48 lg:w-60 h-auto opacity-50 sm:opacity-100"
+               className="animate-rotate-item absolute -top-20 -left-[10%] md:-left-[17%] lg:-left-[30%] w-40 sm:w-48 lg:w-60 h-auto opacity-50 sm:opacity-100"
             />
          </div>
 
@@ -143,7 +143,7 @@ const ForMentors = () => {
                height={500}
                src="/images/13.png"
                alt="head illustration"
-               className="absolute -top-20 -right-[30%] md:-right-[17%] sm:-right-[10%] w-40 sm:w-48 lg:w-60 h-auto opacity-50 sm:opacity-100"
+               className="animate-float-item absolute -top-20 -right-[30%] md:-right-[17%] sm:-right-[10%] w-40 sm:w-48 lg:w-60 h-auto opacity-50 sm:opacity-100"
             />
             <h2 className="font-medium text-2xl sm:text-3xl lg:text-4xl tracking-tight text-black pt-16">
                Why Become a YARA Mentor?
