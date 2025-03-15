@@ -44,7 +44,7 @@ const HeroSection = () => {
                height={1000}
                src="/images/10.png"
                alt="planet illustration"
-               className="w-3/4 right-0 h-auto max-w-4xl mx-auto animate-float"
+               className="w-3/4 right-0 h-auto mx-auto animate-float"
             />
          </div>
          <style jsx>{`

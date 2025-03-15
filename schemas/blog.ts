@@ -20,6 +20,11 @@ export default {
          },
       },
       {
+         name: 'publishedAt',
+         title: 'Published At',
+         type: 'datetime',
+      },
+      {
          name: 'titleImage',
          type: 'image',
          title: 'Title Image',

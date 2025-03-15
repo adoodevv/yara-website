@@ -7,11 +7,11 @@ export default function Footer() {
   return (
     <footer className="relative text-black font-neue overflow-hidden">
       <Image
-        width={1000}
-        height={1000}
+        width={1900}
+        height={1900}
         src="/images/9.png"
         alt="orange lines illustration"
-        className="absolute top-20 left-[-5%] w-[95%] z-0"
+        className="absolute top-0 left-[-5%] w-[95%] z-0"
       />
       <Image
         width={1000}
@@ -29,7 +29,7 @@ export default function Footer() {
             WITH US
           </p>
         </div>
-        <div className="relative grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-y-8 md:gap-8 z-10 text-center md:text-left">
+        <div className="relative lg:py-20 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-y-8 md:gap-8 z-10 text-center md:text-left">
           <div>
             <h3 className="text-2xl md:text-4xl font-bold mb-4">Quick Links</h3>
             <ul className="space-y-2 font-roman text-lg md:text-2xl">

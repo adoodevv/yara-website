@@ -14,6 +14,14 @@ const Header = () => {
     setMobileMenuOpen(!mobileMenuOpen);
   };
 
+  const handleMouseEnter = (dropdown: string) => {
+    setActiveDropdown(dropdown);
+  };
+
+  const handleMouseLeave = () => {
+    setActiveDropdown(null);
+  };
+
   interface DropdownProps {
     dropdown: string;
   }
@@ -44,85 +52,45 @@ const Header = () => {
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-8">
-            <div className="relative group hover:-translate-y-1 transition-translate duration-700">
-              <button
-                onClick={() => toggleDropdown('about')}
-                className="font-roman flex items-center"
+            {['About', 'What We Do', 'How to Apply'].map((menu) => (
+              <div
+                key={menu}
+                className="relative group"
+                onMouseEnter={() => handleMouseEnter(menu)}
+                onMouseLeave={handleMouseLeave}
               >
-                About Us
-                <motion.div
-                  animate={{ rotate: activeDropdown === 'about' ? 180 : 0 }}
-                  transition={{ duration: 0.3, ease: "easeInOut" }}
-                >
-                  <ChevronDown className="ml-1 w-6 h-6 text-gray-900" />
-                </motion.div>
-              </button>
-              {activeDropdown === 'about' && (
-                <div className="absolute left-0 mt-2 w-48 bg-white shadow-lg z-10 rounded-lg">
-                  <Link href="/get-to-know-us" className={`block px-4 py-2 text-base rounded-lg hover:bg-purple-100`}>
-                    Get To Know Us
-                  </Link>
-                  <Link href="/mission-purpose" className={`block px-4 py-2 text-base rounded-lg hover:bg-purple-100`}>
-                    Mission & Purpose
-                  </Link>
-                  <Link href="/who-we-are" className={`block px-4 py-2 text-base rounded-lg hover:bg-purple-100`}>
-                    Who We Are
-                  </Link>
-                </div>
-              )}
-            </div>
-
-            <div className="relative group hover:-translate-y-1 transition-translate duration-700">
-              <button
-                onClick={() => toggleDropdown('what-we-do')}
-                className="font-roman flex items-center"
-              >
-                What We Do
-                <motion.div
-                  animate={{ rotate: activeDropdown === 'what-we-do' ? 180 : 0 }}
-                  transition={{ duration: 0.3, ease: "easeInOut" }}
-                >
-                  <ChevronDown className="ml-1 w-6 h-6 text-gray-900" />
-                </motion.div>
-              </button>
-              {activeDropdown === 'what-we-do' && (
-                <div className="absolute left-0 mt-2 w-48 bg-white z-10 rounded-lg">
-                  <Link href="/fellowship-program" className={`block px-4 py-2 text-base rounded-lg hover:bg-purple-100`}>
-                    Fellowship Programs
-                  </Link>
-                  <Link href="/trainings-workshops" className={`block px-4 py-2 text-base rounded-lg hover:bg-purple-100`}>
-                    Training & Workshops
-                  </Link>
-                </div>
-              )}
-            </div>
-
-            <div className="relative group hover:-translate-y-1 transition-translate duration-700">
-              <button
-                onClick={() => toggleDropdown('how-to-apply')}
-                className="font-roman flex items-center"
-              >
-                How to Apply
-                <motion.div
-                  animate={{ rotate: activeDropdown === 'how-to-apply' ? 180 : 0 }}
-                  transition={{ duration: 0.3, ease: "easeInOut" }}
-                >
-                  <ChevronDown className="ml-1 w-6 h-6 text-gray-900" />
-                </motion.div>
-              </button>
-              {activeDropdown === 'how-to-apply' && (
-                <div className="absolute left-0 mt-2 w-48 bg-white/90 backdrop-blur-sm shadow-lg z-10 rounded-lg">
-                  <Link href="/for-fellows" className={`block px-4 py-2 text-base rounded-lg hover:bg-purple-100`}>
-                    For Fellows
-                  </Link>
-                  <Link href="/for-mentors" className={`block px-4 py-2 text-base rounded-lg hover:bg-purple-100`}>
-                    For Mentors
-                  </Link>
-                </div>
-              )}
-            </div>
-
-            <Link href="/whats-new" className="font-roman hover:-translate-y-1 transition-translate duration-700">What&apos;s New</Link>
+                <button className="font-roman flex items-center hover:bg-white/75 transition-colors duration-500 px-2 py-1 rounded-lg">
+                  {menu.replace('-', ' ')}
+                  <motion.div animate={{ rotate: activeDropdown === menu ? 180 : 0 }} transition={{ duration: 0.3, ease: "easeInOut" }}>
+                    <ChevronDown className="ml-1 w-6 h-6 text-gray-900" />
+                  </motion.div>
+                </button>
+                {activeDropdown === menu && (
+                  <div className="absolute left-0 w-48 bg-white shadow-lg z-10 rounded-lg">
+                    {menu === 'About' && (
+                      <>
+                        <Link href="/get-to-know-us" className="block px-4 py-2 text-base rounded-t-lg hover:bg-purple-100">Get To Know Us</Link>
+                        <Link href="/mission-purpose" className="block px-4 py-2 text-base hover:bg-purple-100">Mission & Purpose</Link>
+                        <Link href="/who-we-are" className="block px-4 py-2 text-base rounded-b-lg hover:bg-purple-100">Who We Are</Link>
+                      </>
+                    )}
+                    {menu === 'What We Do' && (
+                      <>
+                        <Link href="/fellowship-program" className="block px-4 py-2 text-base rounded-t-lg hover:bg-purple-100">Fellowship Programs</Link>
+                        <Link href="/trainings-workshops" className="block px-4 py-2 text-base rounded-b-lg hover:bg-purple-100">Training & Workshops</Link>
+                      </>
+                    )}
+                    {menu === 'How to Apply' && (
+                      <>
+                        <Link href="/for-fellows" className="block px-4 py-2 text-base rounded-t-lg hover:bg-purple-100">For Fellows</Link>
+                        <Link href="/for-mentors" className="block px-4 py-2 text-base rounded-b-lg hover:bg-purple-100">For Mentors</Link>
+                      </>
+                    )}
+                  </div>
+                )}
+              </div>
+            ))}
+            <Link href="/whats-new" className="font-roman hover:bg-white/75 transition-colors duration-500 px-2 py-1 rounded-lg">What&apos;s New</Link>
           </nav>
 
           {/* Mobile Menu Button */}

@@ -1,40 +1,23 @@
-// For your general interface usage
-export interface ImageType {
-   url: string;
-   alt?: string;
-   width?: number;
-   height?: number;
-}
-
-// For Sanity image references (what Sanity actually returns)
-export interface SanityImageAsset {
-   _type: string;
-   asset: {
-      _ref: string;
-      _type: string;
-   };
-   // Other potential fields
-}
-
 export interface SimpleBlogCard {
    title: string;
    smallDescription: string;
    currentSlug: string;
-   titleImage: SanityImageAsset; // Changed from ImageType
+   titleImage: any;
 }
 
 export interface FullBlog {
    currentSlug: string;
    title: string;
-   content: string; // Changed from string to any (or use a more specific PortableText type)
-   titleImage: SanityImageAsset; // Changed from ImageType
+   content: string;
+   titleImage: any;
+   publishedAt: string;
 }
 
 export interface NewsAnnouncement {
    _id: string;
    title: string;
    slug: string;
-   mainImage: SanityImageAsset; // Changed from ImageType
+   mainImage: any;
    link?: string;
    description?: string;
 }
@@ -45,7 +28,7 @@ export interface WhatsNew {
    slug: {
       current: string;
    };
-   mainImage: SanityImageAsset; // Changed from ImageType
+   mainImage: any;
    link?: string;
    description: string;
 }
