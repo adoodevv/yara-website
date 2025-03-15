@@ -1,29 +1,5 @@
 import { Rule } from 'sanity';
 
-interface NewsAnnouncementField {
-   name: string;
-   title: string;
-   type: string;
-   options?: Record<string, any>;
-   description?: string;
-   validation?: (rule: Rule) => any;
-}
-
-interface NewsAnnouncementPreview {
-   select: {
-      title: string;
-      media: string;
-   };
-}
-
-interface NewsAnnouncementSchema {
-   name: string;
-   title: string;
-   type: string;
-   fields: NewsAnnouncementField[];
-   preview: NewsAnnouncementPreview;
-}
-
 export default {
    name: 'newsAnnouncement',
    title: 'News & Announcements',
@@ -72,11 +48,5 @@ export default {
          type: 'text',
          validation: (Rule: Rule) => Rule.max(200)
       }
-   ],
-   preview: {
-      select: {
-         title: 'title',
-         media: 'mainImage'
-      }
-   }
-} as NewsAnnouncementSchema;
+   ]
+}
