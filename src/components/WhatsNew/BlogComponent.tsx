@@ -18,7 +18,7 @@ export default function Blog({ initialData }: { initialData: SimpleBlogCard[] })
    const paginate = (pageNumber: number) => setCurrentPage(pageNumber);
 
    return (
-      <div className="font-neue max-w-6xl mx-auto px-4 sm:px-6 pt-8 sm:pt-12 md:pt-32">
+      <div className="font-neue max-w-6xl mx-auto px-4 sm:px-6 pt-8 sm:pt-12">
          <div className="mb-6 sm:mb-8">
             <h2 className="relative text-2xl sm:text-3xl font-bold">
                Blog & Research Insights
@@ -28,13 +28,6 @@ export default function Blog({ initialData }: { initialData: SimpleBlogCard[] })
                   src="/images/15.png"
                   alt="underline header illustration"
                   className="absolute left-0 h-auto w-[70%] sm:w-[50%] top-4"
-               />
-               <Image
-                  width={500}
-                  height={500}
-                  src="/images/2.png"
-                  alt="bulb illustration"
-                  className="absolute z-0 -rotate-[45deg] -bottom-40 w-auto -right-32 h-[700px] max-w-4xl mx-auto hidden opacity-50 lg:opacity-100 sm:block"
                />
             </h2>
          </div>
