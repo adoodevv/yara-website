@@ -3,6 +3,8 @@ import Blog from "@/components/WhatsNew/Blog";
 import Image from "next/image";
 import NewsletterSignup from "@/components/WhatsNew/NewsLetterSignup";
 
+export const revalidate = 30
+
 const News = () => {
    return (
       <div className="relative py-8 px-4 overflow-x-hidden">
