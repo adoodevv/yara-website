@@ -1,10 +1,12 @@
 "use client";
 import { useState, useEffect } from "react";
+import { set } from "sanity";
 
 const NewsletterSignup = () => {
    const [email, setEmail] = useState("");
    const [firstName, setFirstName] = useState("");
    const [lastName, setLastName] = useState("");
+   const [applicantType, setApplicantType] = useState("Fellow");
    const [message, setMessage] = useState("");
    const [showPopup, setShowPopup] = useState(false);
 
@@ -32,7 +34,7 @@ const NewsletterSignup = () => {
          headers: {
             "Content-Type": "application/json",
          },
-         body: JSON.stringify({ email, firstName, lastName }),
+         body: JSON.stringify({ email, firstName, lastName, applicantType }),
       });
 
       const data: NewsletterResponse = await response.json();
@@ -40,6 +42,7 @@ const NewsletterSignup = () => {
       setEmail("");
       setFirstName("");
       setLastName("");
+      setApplicantType("Fellow");
    };
 
    return (
@@ -77,19 +80,48 @@ const NewsletterSignup = () => {
                      />
                   </div>
                </div>
-               <div className="relative">
-                  <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-1">
-                     Email Address
-                  </label>
-                  <input
-                     id="email"
-                     type="email"
-                     value={email}
-                     onChange={(e) => setEmail(e.target.value)}
-                     placeholder="Enter your email"
-                     required
-                     className="w-full border border-gray-300 focus:border-black focus:ring-1 focus:ring-black px-4 py-2 rounded-md outline-none transition-all"
-                  />
+               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                  <div className="relative">
+                     <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-1">
+                        Email Address
+                     </label>
+                     <input
+                        id="email"
+                        type="email"
+                        value={email}
+                        onChange={(e) => setEmail(e.target.value)}
+                        placeholder="Enter your email"
+                        required
+                        className="w-full border border-gray-300 focus:border-black focus:ring-1 focus:ring-black px-4 py-2 rounded-md outline-none transition-all"
+                     />
+                  </div>
+                    <div className="relative">
+                      <label className="block text-sm font-medium text-gray-700 mb-1">Role</label>
+                      <div className="flex flex-col md:flex-row items-start md:items-center gap-4">
+                        <label className="flex items-center">
+                           <input
+                             type="radio"
+                             name="role"
+                             value="Fellow"
+                             checked={applicantType === "Fellow"}
+                             onChange={(e) => setApplicantType(e.target.value)}
+                             className="mr-2"
+                           />
+                           Fellow
+                        </label>
+                        <label className="flex items-center">
+                           <input
+                             type="radio"
+                             name="role"
+                             value="Mentor"
+                             checked={applicantType === "Mentor"}
+                             onChange={(e) => setApplicantType(e.target.value)}
+                             className="mr-2"
+                           />
+                           Mentor
+                        </label>
+                      </div>
+                    </div>
                </div>
                <div className="flex justify-center mt-6">
                   <button

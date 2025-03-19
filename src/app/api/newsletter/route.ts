@@ -2,6 +2,7 @@ interface RequestBody {
    email: string;
    firstName: string;
    lastName: string;
+   applicantType: string;
 }
 
 interface ResponseBody {
@@ -10,7 +11,7 @@ interface ResponseBody {
 
 export async function POST(req: Request): Promise<Response> {
    try {
-      const { email, firstName, lastName }: RequestBody = await req.json();
+      const { email, firstName, lastName, applicantType }: RequestBody = await req.json();
       const API_KEY: string | undefined = process.env.EMAIL_OCTOPUS_API_KEY;
       const LIST_ID: string | undefined = process.env.EMAIL_OCTOPUS_LIST_ID;
 
@@ -25,7 +26,8 @@ export async function POST(req: Request): Promise<Response> {
             status: "SUBSCRIBED",
             fields: {
                FirstName: firstName,
-               LastName: lastName
+               LastName: lastName,
+               ApplicantType: applicantType,
             }
          }),
       });
