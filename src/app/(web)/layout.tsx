@@ -12,6 +12,13 @@ const salted = localFont({
   variable: '--font-salted',
 });
 
+const playfair = localFont({
+  src: './styles/fonts/PlayfairDisplay-BoldItalic.ttf',
+  weight: '700',
+  style: 'italic',
+  variable: '--font-playfair',
+});
+
 const neue = localFont({
   src: [
     {
@@ -63,7 +70,7 @@ export default function RootLayout({
       <head>
         <link rel="icon" href="/images/yara-logo-white.png" />
       </head>
-      <body className={`${neue.variable} ${salted.variable} font-sans`}>
+      <body className={`${neue.variable} ${salted.variable} ${playfair.variable} font-sans`}>
         <Providers>
           <main className="bg-gray-200">
             <Header />

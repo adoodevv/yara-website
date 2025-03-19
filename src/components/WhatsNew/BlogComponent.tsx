@@ -36,28 +36,28 @@ export default function Blog({ initialData }: { initialData: SimpleBlogCard[] })
          <div className="space-y-4 sm:space-y-6">
             {currentBlogs.map((blog, index) => (
                <div key={index} className="group cursor-pointer">
-                  <div className="border-t border-gray-200 pt-4 sm:pt-6">
-                     <Link href={`/blog/${blog.currentSlug}`}>
-                        <div className="flex flex-col sm:flex-row justify-between items-center sm:items-start gap-4 sm:gap-6">
-                           <div className="flex-1 w-full">
-                              <h3 className="text-lg sm:text-xl font-medium mb-2 sm:mb-3 group-hover:text-purple-600 transition-colors">
-                                 {blog.title}
-                              </h3>
-                              <p className="text-gray-600 line-clamp-3">
-                                 {blog.smallDescription}
-                              </p>
-                           </div>
-                           <div className="flex-shrink-0 w-full sm:w-auto mt-3 sm:mt-0">
-                              <Image
-                                 width={500}
-                                 height={500}
-                                 src={urlFor(blog.titleImage).url()} alt={blog.title}
-                                 className="w-full h-48 sm:w-48 sm:h-32 object-cover rounded-lg"
-                              />
-                           </div>
+                  <hr className="border-gray-300" />
+                  <div className="border-t border-gray-200 pt-4 sm:pt-6"></div>
+                  <Link href={`/blog/${blog.currentSlug}`}>
+                     <div className="flex flex-col sm:flex-row justify-between items-center sm:items-start gap-4 sm:gap-6">
+                        <div className="flex-1 w-full">
+                           <h3 className="text-lg sm:text-xl font-medium mb-2 sm:mb-3 group-hover:text-purple-600 transition-colors">
+                              {blog.title}
+                           </h3>
+                           <p className="text-gray-600 line-clamp-3">
+                              {blog.smallDescription}
+                           </p>
                         </div>
-                     </Link>
-                  </div>
+                        <div className="flex-shrink-0 w-full sm:w-auto mt-3 sm:mt-0">
+                           <Image
+                              width={500}
+                              height={500}
+                              src={urlFor(blog.titleImage).url()} alt={blog.title}
+                              className="w-full h-48 sm:w-48 sm:h-32 object-cover rounded-lg"
+                           />
+                        </div>
+                     </div>
+                  </Link>
                </div>
             ))}
          </div>

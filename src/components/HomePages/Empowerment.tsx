@@ -1,6 +1,28 @@
+'use client'
+import { useRef, useEffect } from 'react';
+import gsap from 'gsap';
+import ScrollTrigger from 'gsap/dist/ScrollTrigger';
 import Image from "next/image";
 
 const Empowerment = () => {
+   const sectionRef = useRef(null);
+
+   useEffect(() => {
+      gsap.registerPlugin(ScrollTrigger);
+
+      gsap.from(sectionRef.current, {
+         opacity: 0,
+         y: 50,
+         duration: 1,
+         scrollTrigger: {
+            trigger: sectionRef.current,
+            start: 'top 80%',
+            end: 'bottom 20%',
+            toggleActions: 'play none none reverse',
+         },
+      });
+   }, []);
+
    return (
       <section className="relative font-neue pt-24 md:pt-48 lg:pt-60 px-4">
          <div className="max-w-7xl mx-auto">
@@ -8,7 +30,7 @@ const Empowerment = () => {
                <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-8xl font-black tracking-tight text-black mb-4 sm:mb-8 z-20">
                   EMPOWERING<br />AFRICA&apos;S FUTURE<br />RESEARCHERS
                </h2>
-               <p className="font-roman text-lg sm:text-xl md:text-2xl max-w-4xl px-2 z-20">
+               <p ref={sectionRef} className="font-roman text-lg sm:text-xl md:text-2xl max-w-4xl px-2 z-20">
                   At YARA, we provide aspiring African researchers with the skills, training, and support
                   needed to tackle Africa&apos;s most pressing challenges. Through our fellowship and training programs,
                   we equip undergraduate students with hands-on research experience, mentorship

@@ -1,7 +1,29 @@
+'use client'
+import { useRef, useEffect } from 'react';
+import gsap from 'gsap';
+import ScrollTrigger from 'gsap/dist/ScrollTrigger';
 import Link from "next/link";
 import Image from "next/image";
 
 const WhyAfrica = () => {
+   const sectionRef = useRef(null);
+
+   useEffect(() => {
+      gsap.registerPlugin(ScrollTrigger);
+
+      gsap.from(sectionRef.current, {
+         opacity: 0,
+         y: 50,
+         duration: 1,
+         scrollTrigger: {
+            trigger: sectionRef.current,
+            start: 'top 80%',
+            end: 'bottom 20%',
+            toggleActions: 'play none none reverse',
+         },
+      });
+   }, []);
+
    return (
       <section className="relative font-neue py-8 md:py-16 px-4 overflow-hidden">
          <div className="max-w-7xl mx-auto">
@@ -9,15 +31,15 @@ const WhyAfrica = () => {
                <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-8xl font-black tracking-tight text-black z-10">
                   WHY AFRICA<br />NEEDS MORE<br />RESEARCHERS
                </h2>
-               <p className="py-8 sm:py-16 font-bold text-base md:text-xl lg:text-3xl italic">
+               <p className="font-playfair py-8 sm:py-16 text-base md:text-xl lg:text-4xl">
                   <span className="z-10">Did you know?</span>
                </p>
-               <p className="text-lg sm:text-xl md:text-2xl max-w-5xl px-2">
+               <p ref={sectionRef} className="text-lg sm:text-xl md:text-2xl max-w-5xl px-2">
                   Africa contributes less than <span className="font-medium">1% of global research output</span> despite being home to
                   <span className="font-medium"> 17% of the world&apos;s population</span>. Without a strong research foundation, scientific
                   breakthroughs, innovation, and technological advancements will remain out of reach.
                </p>
-               <p className="text-lg sm:text-xl md:text-2xl max-w-5xl mt-4 px-2">
+               <p ref={sectionRef} className="text-lg sm:text-xl md:text-2xl max-w-5xl mt-4 px-2">
                   At YARA, we believe Africa needs more researchers—not just in numbers,
                   but in quality, innovation, and impact. Our programs are designed to change
                   this reality by training and mentoring the brightest young minds across the

@@ -54,9 +54,11 @@ const WhatsNew = () => {
                </div>
             </div>
             <div className="flex justify-center items-center pt-4 sm:pt-8">
-               <button className="font-neue font-light mt-4 sm:mt-8 px-4 sm:px-6 py-2 sm:py-3 border-[1px] border-black text-black rounded-full hover:bg-black hover:text-white transition-all duration-700">
-                  Sign up for newsletter
-               </button>
+               <Link href="/whats-new">
+                  <button className="font-neue font-light mt-4 sm:mt-8 px-4 sm:px-6 py-2 sm:py-3 border-[1px] border-black text-black rounded-full hover:bg-black hover:text-white transition-all duration-700">
+                     Sign up for newsletter
+                  </button>
+               </Link>
             </div>
          </div>
       </section >

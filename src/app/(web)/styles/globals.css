@@ -9,6 +9,10 @@
   font-family: var(--font-neue);
 }
 
+.font-playfair {
+  font-family: var(--font-playfair);
+}
+
 html,
 body {
   -ms-overflow-style: hidden;
